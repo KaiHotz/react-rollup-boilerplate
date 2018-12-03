@@ -29,15 +29,15 @@ export default {
     }),
     url(),
     svgr(),
+    resolve(),
     babel({
-      exclude: 'node_modules/**',
       plugins: [
         '@babel/plugin-proposal-optional-chaining',
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-class-properties',
       ],
+      exclude: 'node_modules/**',
     }),
-    resolve(),
     commonjs(),
   ],
 };
