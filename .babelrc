@@ -1,14 +1,8 @@
 {
   "presets": [
-    ["env", {
+    ["@babel/preset-env", {
       "modules": false
     }],
-    "react"
-  ],
-  "plugins": [
-    "@babel/plugin-external-helpers",
-    "@babel/plugin-proposal-optional-chaining",
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/preset-react"
   ]
 }
