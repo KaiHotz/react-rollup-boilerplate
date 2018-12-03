@@ -1,10 +1,13 @@
 {
   "name": "rollup-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "Boilerplate for writing React Libraries bundled with rollup to commonJs and ES6 Modules",
+  "author": "Kai Hotz",
   "license": "MIT",
-  "repository": "/rollup-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:KaiHotz/react-rollup-boilerplate.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -13,7 +16,7 @@
     "npm": ">=5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "esw --ext .jsx --ext .js --color",
     "build": "rollup -c",
     "start": "rollup -c -w",
