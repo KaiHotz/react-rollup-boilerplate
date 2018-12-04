@@ -23,9 +23,14 @@ export default {
     },
   ],
   plugins: [
-    external(),
     postcss({
-      modules: true,
+      plugins: [],
+      extract: true,
+      minimize: true,
+      sourceMap: 'inline',
+    }),
+    external({
+      includeDependencies: true,
     }),
     url(),
     svgr(),
