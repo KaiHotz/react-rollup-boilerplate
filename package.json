@@ -22,6 +22,7 @@
     "start": "rollup -c -w",
     "prepare": "npm run build"
   },
+  "dependencies": {},
   "peerDependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
@@ -66,6 +67,7 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-uglify-es": "0.0.1",
     "rollup-plugin-url": "^2.1.0"
   },
   "files": [

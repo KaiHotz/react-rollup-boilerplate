@@ -5,6 +5,7 @@ import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
+import uglify from 'rollup-plugin-uglify-es';
 
 import pkg from './package.json';
 
@@ -25,7 +26,6 @@ export default {
   plugins: [
     postcss({
       plugins: [],
-      extract: true,
       minimize: true,
       sourceMap: 'inline',
     }),
@@ -44,5 +44,6 @@ export default {
       exclude: 'node_modules/**',
     }),
     commonjs(),
+    uglify(),
   ],
 };
