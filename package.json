@@ -1,7 +1,7 @@
 {
   "name": "rollup-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for writing React Libraries bundled with rollup to commonJs and ES6 Modules, Styleguide and SCSS support",
+  "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules adn React Styleguidist",
   "author": "Kai Hotz",
   "license": "MIT",
   "repository": {
