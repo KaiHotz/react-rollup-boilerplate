@@ -28,8 +28,8 @@ To start the developing run :
 
 This will build a version of your library, run the watcher and also run the Styleguide.
 To open the Styleguide open your Browser and navigate to [http://localhost:6060](http://localhost:6060).
-Always provide an `YourComponent.example.md` file so your component will show up in the Styleguide.
-You can refer to `Button.example.md` file, but i think you'll get the idea.
+Always provide an `YourComponent.examples.md` file so your component will show up in the Styleguide.
+You can refer to `Button.examples.md` file, but i think you'll get the idea.
 Click here [React Styleguidist](https://react-styleguidist.js.org/) for more information about
 
 ### Proposals (Babel)
