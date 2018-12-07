@@ -77,7 +77,7 @@ To release your library to NPM or your private Registry
 ```
 Make sure you have an active account on NPM and and your `.npmrc` file is correctly setup
 
-# Script
+# Scripts
 
 - `npm run dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change
 - `npm run start` : Only serves the Styleguide
