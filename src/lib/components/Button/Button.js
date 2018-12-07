@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './styles.css'
 
 const Button = ({
   onClick,
@@ -9,7 +10,7 @@ const Button = ({
 }) => (
   <button
     type="button"
-    className={className}
+    className={`button ${className}`}
     onClick={onClick}
     disabled={disabled}
   >
