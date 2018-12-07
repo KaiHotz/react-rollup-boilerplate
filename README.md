@@ -18,7 +18,7 @@ Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.
 ```
 
 
-# Developing
+## Developing
 
 To start the developing run :
 
@@ -38,12 +38,12 @@ For smoother development some Babel plugin are included
 - [object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread)
 - [optional-chaining](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-optional-chaining)
 
-# Styling your components
+## Styling your components
 
 `SCSS` and `CSS` are supported out of the box just import your styles into your component like you normaly would do.
 For the use of  `CSS Modules` refere to [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss)
 
-# Testing
+## Testing
 
 Testing is done with [Jest](https://facebook.github.io/jest/), [Enzyme](http://airbnb.io/enzyme/) and [Jasmine Matchers](https://github.com/JamieMason/Jasmine-Matchers)
 You can refer to `Button.test.js` as an example.
@@ -56,7 +56,7 @@ or (for getting coverage)
 ```
 
 
-# Linting
+## Linting
 
 Linting is set up throug [ESLint](https://eslint.org/) and configured with  [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 You can modify linting rules by overriding them in the `.eslintrc.json` file.
@@ -69,7 +69,7 @@ or (for for automatic fixing if possible)
 > npm run lint:fix
 ```
 
-# Publishing your library to NPM
+## Publishing your library to NPM
 
 To release your library to NPM or your private Registry
 ```
@@ -77,7 +77,7 @@ To release your library to NPM or your private Registry
 ```
 Make sure you have an active account on NPM and and your `.npmrc` file is correctly setup
 
-# Scripts
+## Scripts
 
 - `npm run dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change
 - `npm run start` : Only serves the Styleguide
@@ -90,22 +90,22 @@ Make sure you have an active account on NPM and and your `.npmrc` file is correc
 - `npm run release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file)
 
 
-# Resources
+## Resources
 
-## Bundler
+### Bundler
 - [Rollup.js](https://rollupjs.org/guide/en)
 
-## Styleguide
+### Styleguide
 - [React Styleguidist](https://react-styleguidist.js.org/)
 
-## Testing
+### Testing
 - [Jasmine Matchers](https://github.com/JamieMason/Jasmine-Matchers)
 - [Enzyme](http://airbnb.io/enzyme/)
 - [Jest](https://facebook.github.io/jest/)
 
-## Linting
+### Linting
 - [ESLint](https://eslint.org/)
 - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 
-## Compiler
+### Compiler
 - [Babel 7](https://babeljs.io/)
