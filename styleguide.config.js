@@ -1,5 +1,5 @@
 const {
-  createConfig, babel, css, sass, setOutput,
+  createConfig, babel, css, sass, setOutput, match, file,
 } = require('webpack-blocks')
 
 module.exports = {
@@ -20,6 +20,9 @@ module.exports = {
     babel(),
     css(),
     sass(),
+    match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.svg', '*.webp'], [
+      file(),
+    ]),
   ]),
   getExampleFilename(componentPath) {
     return componentPath.replace(/\.js?$/, '.examples.md')
