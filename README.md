@@ -58,7 +58,7 @@ or (for getting coverage)
 
 ## Linting
 
-Linting is set up throug [ESLint](https://eslint.org/) and configured with  [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+Linting is set up through [ESLint](https://eslint.org/) and configured with  [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 You can modify linting rules by overriding them in the `.eslintrc.json` file.
 
 ```
