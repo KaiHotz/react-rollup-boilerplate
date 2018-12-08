@@ -71,27 +71,35 @@ or (for for automatic fixing if possible)
 
 ## Publishing your library to NPM
 
-To release your library to NPM or your private Registry
+To release your library to NPM or your private Registry, make sure you have an active account at [NPM](https://www.npmjs.com/), your `.npmrc` file is correctly setup and the repository url in `package.json` file is set to your repoitory url, then:
+
 ```
 > npm run release
 ```
-Make sure you have an active account on NPM and and your `.npmrc` file is correctly setup
 
 ## Styleguide
 
-For custom layouts, styling and more information about the Styleguide please refer to [React Styleguidist](https://react-styleguidist.js.org/) documentation
+For custom layouts, styling and more information about the Styleguide please refer to [React Styleguidist](https://react-styleguidist.js.org/) documentation.
+
+#### Deploy the Styleguide to GitHub Pages
+Make sure the repository url in `package.json` file is set to your repoitory url, then:
+
+```
+> npm run deploy
+```
 
 ## Scripts
 
-- `npm run dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change
-- `npm run start` : Only serves the Styleguide
-- `npm run build` : Builds your library  (build can be faound in `dist` folder)
-- `npm run styleguide:build` : Builds the static Styleguide in case you want to deploy it
-- `npm run test` : Runs the tests
-- `npm run test:coverage`: Runs the test and shows the coverage
-- `npm run lint` : Runs the linter
-- `npm run lint:fix` : Runs the linter and fixes automatic fixable issues
-- `npm run release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file)
+- `npm run dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change.
+- `npm run start` : Only serves the Styleguide.
+- `npm run build` : Builds your library  (build can be faound in `dist` folder).
+- `npm run styleguide:build` : Builds the static Styleguide in case you want to deploy it.
+- `npm run test` : Runs the tests.
+- `npm run test:coverage`: Runs the test and shows the coverage.
+- `npm run lint` : Runs the linter.
+- `npm run lint:fix` : Runs the linter and fixes automatic fixable issues.
+- `npm run release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file).
+- `npm run deploy`: Deploys the Styleguide to GitHub Pages.
 
 
 ## Resources
