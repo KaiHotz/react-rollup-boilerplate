@@ -17,7 +17,7 @@
   },
   "scripts": {
     "dev": "run-p build:watch start",
-    "start": "styleguidist server",
+    "start": "styleguidist server --open",
     "styleguide:build": "styleguidist build",
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
