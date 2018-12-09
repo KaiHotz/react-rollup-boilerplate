@@ -79,7 +79,7 @@ To release your library to NPM or your private Registry, make sure you have an a
 
 ## Styleguide
 
-For custom layouts, styling and more information about the Styleguide please refer to [React Styleguidist](https://react-styleguidist.js.org/) documentation.
+For custom layouts, styleing and more information about the Styleguide please refer to [React Styleguidist](https://react-styleguidist.js.org/) documentation.
 
 #### Deploy the Styleguide to GitHub Pages
 Make sure the repository url in `package.json` file is set to your repoitory url, then:
