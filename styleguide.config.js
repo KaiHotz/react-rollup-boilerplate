@@ -2,8 +2,12 @@ const {
   createConfig, babel, css, sass, setOutput, match, file,
 } = require('webpack-blocks')
 
+const pkg = require('./package.json')
+
 module.exports = {
+  title: `${pkg.name} v${pkg.version}`,
   components: 'src/lib/components/**/*.{js,jsx,ts,tsx}',
+  showSidebar: true,
   usageMode: 'collapse',
   skipComponentsWithoutExample: true,
   theme: {
@@ -11,14 +15,34 @@ module.exports = {
       link: '#1978c8',
       linkHover: '#00adef',
     },
-    fontFamily: {
-      base: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    font: ['Helvetica', 'sans-serif'],
+  },
+  styles: {
+    Heading: {
+      heading2: {
+        fontSize: 26,
+      },
+    },
+    ReactComponent: {
+      root: {
+        marginBottom: 20,
+      },
+      header: {
+        marginBottom: 0,
+      },
+      tabs: {
+        marginBottom: 0,
+      },
     },
   },
   webpackConfig: createConfig([
     setOutput('./build/bundle.js'),
     babel(),
-    match(['*.css', '!*node_modules*'], [css(), sass()]),
+    css(),
+    match(['*.scss', '!*node_modules*'], [
+      css(),
+      sass(/* node-sass options */),
+    ]),
     match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.svg', '*.webp'], [
       file(),
     ]),
