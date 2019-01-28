@@ -18,8 +18,7 @@ module.exports = {
   webpackConfig: createConfig([
     setOutput('./build/bundle.js'),
     babel(),
-    css(),
-    sass(),
+    match(['*.css', '!*node_modules*'], [css(), sass()]),
     match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.svg', '*.webp'], [
       file(),
     ]),
