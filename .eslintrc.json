@@ -17,7 +17,8 @@
   "plugins": [
     "jest",
     "react",
-    "flowtype"
+    "flowtype",
+    "react-hooks"
   ],
   "parserOptions": {
     "sourceType": "module",
@@ -50,6 +51,7 @@
       "error",
       "always"
     ],
+    "react-hooks/rules-of-hooks": "error",
     "newline-before-return": "error",
     "react/no-danger": 0,
     "import/extensions": 0,
