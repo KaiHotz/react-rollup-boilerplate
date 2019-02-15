@@ -6,7 +6,7 @@ There are two methods for getting started with this repo.
 
 ```
   > git clone git@github.com:KaiHotz/react-rollup-boilerplate.git
-  > cd React-Redux-Saga-Advanced-Starter
+  > cd react-rollup-boilerplate
   > npm install
 ```
 
