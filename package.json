@@ -1,6 +1,6 @@
 {
-  "name": "rollup-boilerplate",
-  "version": "1.0.0",
+  "name": "react-rollup-boilerplate",
+  "version": "1.1.0",
   "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and React Styleguidist",
   "author": "Kai Hotz",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git@github.com:KaiHotz/react-rollup-boilerplate.git"
   },
+  "homepage": "https://github.com/KaiHotz/react-rollup-boilerplate",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -34,8 +35,8 @@
   "dependencies": {},
   "peerDependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -61,7 +62,7 @@
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.0.2",
+    "eslint-plugin-react-hooks": "^1.2.0",
     "eslint-watch": "^4.0.2",
     "gh-pages": "^2.0.1",
     "jasmine-expect": "^4.0.1",
@@ -71,12 +72,12 @@
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
     "prop-types": "^15.7.2",
-    "react": "^16.8.2",
+    "react": "^16.8.3",
     "react-app-polyfill": "^0.2.1",
-    "react-dom": "^16.8.2",
-    "react-styleguidist": "^8.0.6",
-    "react-test-renderer": "^16.8.2",
-    "rollup": "^1.2.1",
+    "react-dom": "^16.8.3",
+    "react-styleguidist": "^9.0.0",
+    "react-test-renderer": "^16.8.3",
+    "rollup": "^1.2.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0",
