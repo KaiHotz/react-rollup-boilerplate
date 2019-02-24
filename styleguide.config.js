@@ -73,7 +73,7 @@ module.exports = {
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js')
 
-    return `import { ${name} } from ${pkg.name};`
+    return `import { ${name} } from '${pkg.name}';`
   },
   require: [
     path.resolve(__dirname, 'styleguide/assets/globals.js'),
