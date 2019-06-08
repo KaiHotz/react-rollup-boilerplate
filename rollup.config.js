@@ -30,7 +30,7 @@ export default {
       sourceMap: 'inline',
     }),
     external({
-      includeDependencies: false,
+      includeDependencies: true,
     }),
     url(),
     svgr(),
