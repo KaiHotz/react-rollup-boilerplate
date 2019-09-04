@@ -1,7 +1,7 @@
 const path = require('path')
 
 const {
-  createConfig, babel, css, sass, setOutput, match, file,
+  createConfig, babel, css, sass, match, file,
 } = require('webpack-blocks')
 
 const pkg = require('./package.json')
@@ -56,7 +56,6 @@ module.exports = {
     },
   },
   webpackConfig: createConfig([
-    setOutput('./build/bundle.js'),
     babel(),
     css(),
     match(['*.scss', '!*node_modules*'], [
@@ -75,8 +74,4 @@ module.exports = {
 
     return `import { ${name} } from '${pkg.name}';`
   },
-  require: [
-    path.resolve(__dirname, 'styleguide/assets/globals.js'),
-  ],
-
 }
