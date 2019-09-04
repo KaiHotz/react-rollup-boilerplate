@@ -51,6 +51,7 @@
       "error",
       "always"
     ],
+    "react/jsx-props-no-spreading": 0,
     "react-hooks/rules-of-hooks": "error",
     "newline-before-return": "error",
     "react/no-danger": 0,
