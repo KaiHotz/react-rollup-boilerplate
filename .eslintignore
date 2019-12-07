@@ -5,5 +5,5 @@ build
 dist
 node_modules
 coverage
-scripts
+config
 styleguide
