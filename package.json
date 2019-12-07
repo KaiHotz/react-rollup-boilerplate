@@ -17,10 +17,10 @@
     "npm": ">=5"
   },
   "scripts": {
-    "dev": "run-p build:watch start",
-    "start": "styleguidist server --open",
-    "styleguide:build": "styleguidist build",
-    "build": "rollup -c",
+    "dev": "NODE_ENV=development BABEL_ENV=development run-p build:watch start",
+    "start": "NODE_ENV=development BABEL_ENV=development styleguidist server --open",
+    "styleguide:build": "NODE_ENV=production BABEL_ENV=production styleguidist build",
+    "build": "NODE_ENV=production BABEL_ENV=production rollup -c",
     "build:watch": "rollup -c -w",
     "test": "jest",
     "test:coverage": "jest --coverage --forceExit --colors",
@@ -43,16 +43,19 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@rollup/plugin-url": "^4.0.0",
     "@svgr/rollup": "^4.3.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-named-asset-import": "^0.3.5",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "babel-preset-react-app": "^9.0.1",
+    "babel-preset-react-app": "^9.1.0",
     "cross-env": "^5.2.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -68,8 +71,10 @@
     "gh-pages": "^2.1.1",
     "jasmine-expect": "^4.0.3",
     "jest": "^24.9.0",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
     "jest-pnp-resolver": "^1.2.1",
     "jest-resolve": "^24.9.0",
+    "jest-watch-typeahead": "^0.4.2",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "prop-types": "^15.7.2",
@@ -91,6 +96,9 @@
     "dist"
   ],
   "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts",
@@ -101,11 +109,14 @@
       "react-app-polyfill/jsdom",
       "<rootDir>/scripts/enzymeConfig.js"
     ],
-    "testMatch": [
-      "**/__tests__/**/*.[jt]s?(x)",
-      "**/?(*.)+(spec|test).[jt]s?(x)"
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
     ],
-    "testEnvironment": "jsdom",
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jest-environment-jsdom-fourteen",
     "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
@@ -135,6 +146,15 @@
       "web.jsx",
       "jsx",
       "node"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
     ]
   }
 }

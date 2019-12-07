@@ -36,6 +36,7 @@ export default {
     svgr(),
     resolve(),
     babel({
+      runtimeHelpers: true,
       plugins: [
         '@babel/plugin-proposal-object-rest-spread',
         '@babel/plugin-proposal-optional-chaining',
