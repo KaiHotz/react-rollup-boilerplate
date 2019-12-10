@@ -1,10 +1,6 @@
 const path = require('path')
-
-const {
-  createConfig, babel, css, sass, match, file,
-} = require('webpack-blocks')
-
 const pkg = require('./package.json')
+const webpackConfig = require('./config/webpack.js')
 
 module.exports = {
   title: `${pkg.name} v${pkg.version}`,
@@ -55,17 +51,7 @@ module.exports = {
       },
     },
   },
-  webpackConfig: createConfig([
-    babel(),
-    css(),
-    match(['*.scss', '!*node_modules*'], [
-      css(),
-      sass(/* node-sass options */),
-    ]),
-    match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.svg', '*.webp'], [
-      file(),
-    ]),
-  ]),
+  webpackConfig,
   getExampleFilename(componentPath) {
     return componentPath.replace(/\.js?$/, '.examples.md')
   },
