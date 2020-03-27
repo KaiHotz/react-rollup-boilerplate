@@ -12,14 +12,14 @@ There are two methods for getting started with this repo.
 ```
   > git clone git@github.com:KaiHotz/react-rollup-boilerplate.git
   > cd react-rollup-boilerplate
-  > yarn install
+  > npm run install
 ```
 
 #### Not Familiar with Git?
 Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.zip) to download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
-  > yarn install
+  > npm run install
 ```
 
 
@@ -28,7 +28,7 @@ Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.
 To start the developing run :
 
 ```
-> yarn dev
+> npm run dev
 ```
 
 This will build a version of your library, run the watcher and also run the Styleguide.
@@ -53,11 +53,11 @@ For the use of  `CSS Modules` refere to [rollup-plugin-postcss](https://github.c
 Testing is done with [Jest](https://facebook.github.io/jest/), [Enzyme](http://airbnb.io/enzyme/) and [Jasmine Matchers](https://github.com/JamieMason/Jasmine-Matchers)
 You can refer to `Button.test.js` as an example.
 ```
-> yarn test
+> npm run test
 ```
 or (for getting coverage)
 ```
-> yarn test:coverage
+> npm run test:coverage
 ```
 
 
@@ -67,11 +67,11 @@ Linting is set up through [ESLint](https://eslint.org/) and configured with  [es
 You can modify linting rules by overriding them in the `.eslintrc.json` file.
 
 ```
-> yarn lint
+> npm run lint
 ```
 or (for for automatic fixing if possible)
 ```
-> yarn lint:fix
+> npm run lint:fix
 ```
 
 ## Publishing your library to NPM
@@ -79,7 +79,7 @@ or (for for automatic fixing if possible)
 To release your library to NPM or your private Registry, make sure you have an active account at [NPM](https://www.npmjs.com/), your `.npmrc` file is correctly setup and the repository url in `package.json` file is set to your repoitory url, then:
 
 ```
-> yarn release
+> npm run release
 ```
 
 ## Styleguide
@@ -90,21 +90,21 @@ For custom layouts, styleing and more information about the Styleguide please re
 Make sure the repository url in `package.json` file is set to your repoitory url, then:
 
 ```
-> yarn deploy
+> npm run deploy
 ```
 
 ## Scripts
 
-- `yarn dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change.
-- `yarn start` : Only serves the Styleguide.
-- `yarn build` : Builds your library  (build can be faound in `dist` folder).
-- `yarn styleguide:build` : Builds the static Styleguide in case you want to deploy it.
-- `yarn test` : Runs the tests.
-- `yarn test:coverage`: Runs the test and shows the coverage.
-- `yarn lint` : Runs the linter.
-- `yarn lint:fix` : Runs the linter and fixes automatic fixable issues.
-- `yarn release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file).
-- `yarn deploy`: Deploys the Styleguide to GitHub Pages.
+- `npm run dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change.
+- `npm start` : Only serves the Styleguide.
+- `npm run build` : Builds your library  (build can be faound in `dist` folder).
+- `npm run styleguide:build` : Builds the static Styleguide in case you want to deploy it.
+- `npm run test` : Runs the tests.
+- `npm run test:coverage`: Runs the test and shows the coverage.
+- `npm run lint` : Runs the linter.
+- `npm run lint:fix` : Runs the linter and fixes automatic fixable issues.
+- `npm run release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file).
+- `npm run deploy`: Deploys the Styleguide to GitHub Pages.
 
 
 ## Resources
