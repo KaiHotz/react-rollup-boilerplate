@@ -12,14 +12,14 @@ There are two methods for getting started with this repo.
 ```
   > git clone git@github.com:KaiHotz/react-rollup-boilerplate.git
   > cd react-rollup-boilerplate
-  > npm run install
+  > npm install
 ```
 
 #### Not Familiar with Git?
 Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.zip) to download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
-  > npm run install
+  > npm install
 ```
 
 
