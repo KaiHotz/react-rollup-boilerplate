@@ -51,7 +51,7 @@ module.exports = {
       },
     },
   },
-  propsParser: require("react-docgen-typescript").withDefaultConfig({
+  propsParser: require('react-docgen-typescript').withDefaultConfig({
     savePropValueAsString: true,
   }).parse,
   webpackConfig,
