@@ -126,3 +126,4 @@ Make sure the repository url in `package.json` file is set to your repoitory url
 
 ### Compiler
 - [Babel 7](https://babeljs.io/)
+- [Typescript](https://www.typescriptlang.org/)
