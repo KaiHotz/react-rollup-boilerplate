@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel'
+import typescript from 'rollup-plugin-typescript2'
 import commonjs from '@rollup/plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
@@ -30,7 +31,8 @@ export default {
       sourceMap: 'inline',
     }),
     external({
-      includeDependencies: true,
+      ...Object.keys(pkg.dependencies || {}),
+      ...Object.keys(pkg.peerDependencies || {}),
     }),
     url(),
     svgr(),
@@ -45,6 +47,9 @@ export default {
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-class-properties',
         'transform-react-remove-prop-types',
+        typescript({
+          typescript: require('typescript'),
+        }),
       ],
       exclude: 'node_modules/**',
       runtimeHelpers: true,

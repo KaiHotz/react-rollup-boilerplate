@@ -4,7 +4,7 @@ const webpackConfig = require('./config/webpack.js')
 
 module.exports = {
   title: `${pkg.name} v${pkg.version}`,
-  components: 'src/lib/components/**/[A-Z]*.js',
+  components: 'src/lib/components/**/[A-Z]*.tsx',
   moduleAliases: {
     [pkg.name]: path.resolve(__dirname, 'src/lib'),
   },
@@ -51,12 +51,15 @@ module.exports = {
       },
     },
   },
+  propsParser: require("react-docgen-typescript").withDefaultConfig({
+    savePropValueAsString: true,
+  }).parse,
   webpackConfig,
   getExampleFilename(componentPath) {
-    return componentPath.replace(/\.js?$/, '.examples.md')
+    return componentPath.replace(/\.tsx?$/, '.examples.md')
   },
   getComponentPathLine(componentPath) {
-    const name = path.basename(componentPath, '.js')
+    const name = path.basename(componentPath, '.tsx')
 
     return `import { ${name} } from '${pkg.name}';`
   },
