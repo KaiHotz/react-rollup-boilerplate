@@ -11,7 +11,7 @@ import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 export default {
-  input: 'src/lib/index.js',
+  input: 'src/lib/index.ts',
   output: [
     {
       file: pkg.main,
@@ -34,6 +34,9 @@ export default {
       ...Object.keys(pkg.dependencies || {}),
       ...Object.keys(pkg.peerDependencies || {}),
     }),
+    typescript({
+      typescript: require('typescript'),
+    }),
     url(),
     svgr(),
     resolve(),
@@ -47,9 +50,6 @@ export default {
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-class-properties',
         'transform-react-remove-prop-types',
-        typescript({
-          typescript: require('typescript'),
-        }),
       ],
       exclude: 'node_modules/**',
       runtimeHelpers: true,
