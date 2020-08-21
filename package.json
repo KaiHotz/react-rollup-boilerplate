@@ -167,13 +167,7 @@
     ]
   },
   "babel": {
-    "presets": [
-      "react-app",
-      {
-        "flow": false,
-        "typescript": true
-      }
-    ],
+    "presets": [["react-app", {"typescript": true}]],
     "plugins": [
       "@babel/plugin-proposal-object-rest-spread",
       "@babel/plugin-proposal-optional-chaining",
