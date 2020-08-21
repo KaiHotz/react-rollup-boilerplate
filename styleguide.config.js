@@ -4,7 +4,7 @@ const webpackConfig = require('./config/webpack.js')
 
 module.exports = {
   title: `${pkg.name} v${pkg.version}`,
-  components: 'src/lib/components/**/[A-Z]*.tsx',
+  components: 'src/lib/components/**/[A-Z]*.tsx', // for none typescript replace *.tsx with .js or .jsx
   moduleAliases: {
     [pkg.name]: path.resolve(__dirname, 'src/lib'),
   },
@@ -56,10 +56,15 @@ module.exports = {
   }).parse,
   webpackConfig,
   getExampleFilename(componentPath) {
-    return componentPath.replace(/\.tsx?$/, '.examples.md')
+    return componentPath.replace(/\.(js?|tsx?)$/, '.examples.md')
   },
   getComponentPathLine(componentPath) {
-    const name = path.basename(componentPath, '.tsx')
+    let name
+    if (path.basename(componentPath, '.tsx')) {
+      name = path.basename(componentPath, '.tsx')
+    } else {
+      name = path.basename(componentPath, '.js')
+    }
 
     return `import { ${name} } from '${pkg.name}';`
   },
