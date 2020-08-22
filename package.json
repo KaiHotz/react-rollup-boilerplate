@@ -97,7 +97,7 @@
     "react-dom": "^16.13.1",
     "react-styleguidist": "^11.0.8",
     "react-test-renderer": "^16.13.1",
-    "rollup": "^2.26.4",
+    "rollup": "^2.26.5",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-postcss": "^3.1.5",
@@ -168,7 +168,14 @@
     ]
   },
   "babel": {
-    "presets": [["react-app", {"typescript": true}]],
+    "presets": [
+      [
+        "react-app",
+        {
+          "typescript": true
+        }
+      ]
+    ],
     "plugins": [
       "@babel/plugin-proposal-object-rest-spread",
       "@babel/plugin-proposal-optional-chaining",
