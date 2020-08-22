@@ -37,7 +37,12 @@ export default {
     typescript({
       typescript: require('typescript'),
       include: ['*.js+(|x)', '**/*.js+(|x)'],
-      exclude: ['node_modules/**', 'dist', 'src/lib/components/**/*.test.js', 'src/lib/components/**/*.test.ts'],
+      exclude: [
+        'dist',
+        'node_modules/**',
+        '*.test.{js+(|x), ts+(|x)}',
+        '**/*.test.{js+(|x), ts+(|x)}',
+      ],
     }),
     babel({
       presets: [
