@@ -10,12 +10,11 @@
   },
   "homepage": "https://github.com/KaiHotz/react-rollup-boilerplate",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
+  "module": "dist/index.js",
+  "jsnext:main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=8",
     "npm": ">=5"

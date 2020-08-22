@@ -19,6 +19,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "strict": true,
+    "pretty": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "downlevelIteration": true,
@@ -26,12 +27,26 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "stripInternal": true,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "strictPropertyInitialization": true,
+
+  "importHelpers": true,
+  "sourceMap": true,
+  "strictNullChecks": true,
+  "strictFunctionTypes": true,
+  "noImplicitThis": true,
+  "alwaysStrict": true,
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "src/lib/components/**/*.test.js",
+    "src/lib/components/**/*.test.ts",
   ]
 }

@@ -51,6 +51,7 @@
     ],
     "react/jsx-props-no-spreading": 0,
     "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
     "newline-before-return": "error",
     "react/no-danger": 0,
     "import/extensions": 0,
@@ -97,7 +98,10 @@
       {
         "ignoreRestSiblings": true
       }
-    ]
+    ],
+
+    "react/state-in-constructor": "error",
+    "no-useless-call": "error"
   },
   "overrides": [
     {

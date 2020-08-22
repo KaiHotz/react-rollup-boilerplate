@@ -1,3 +1,4 @@
+import { DEFAULT_EXTENSIONS } from '@babel/core'
 import babel from 'rollup-plugin-babel'
 import typescript from 'rollup-plugin-typescript2'
 import commonjs from '@rollup/plugin-commonjs'
@@ -14,11 +15,6 @@ export default {
   input: 'src/lib/index.ts',
   output: [
     {
-      file: pkg.main,
-      format: 'cjs',
-      sourcemap: true,
-    },
-    {
       file: pkg.module,
       format: 'es',
       sourcemap: true,
@@ -31,18 +27,21 @@ export default {
       sourceMap: 'inline',
     }),
     external({
-      ...Object.keys(pkg.dependencies || {}),
-      ...Object.keys(pkg.peerDependencies || {}),
+      includeDependencies: true,
     }),
     typescript({
       typescript: require('typescript'),
+      include: ['*.js+(|x)', '**/*.js+(|x)'],
+      exclude: ['node_modules/**', 'dist', 'src/lib/components/**/*.test.js', 'src/lib/components/**/*.test.ts'],
     }),
-    url(),
-    svgr(),
-    resolve(),
     babel({
       presets: [
         'react-app',
+      ],
+      extensions: [
+        ...DEFAULT_EXTENSIONS,
+        '.ts',
+        '.tsx',
       ],
       plugins: [
         '@babel/plugin-proposal-object-rest-spread',
@@ -54,6 +53,9 @@ export default {
       exclude: 'node_modules/**',
       runtimeHelpers: true,
     }),
+    url(),
+    svgr(),
+    resolve(),
     commonjs(),
     terser(),
   ],

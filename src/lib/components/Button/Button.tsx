@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import cx from 'classnames'
 import './styles.css'
 
-interface IButtonProps {
+export interface IButtonProps {
   onClick: () => void,
   disabled?: boolean,
   className?: string,
