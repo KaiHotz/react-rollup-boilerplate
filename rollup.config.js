@@ -61,7 +61,7 @@ export default {
         'transform-react-remove-prop-types',
       ],
       exclude: 'node_modules/**',
-      runtimeHelpers: true,
+      babelHelpers: 'runtime',
     }),
     url(),
     svgr(),
