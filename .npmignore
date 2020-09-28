@@ -21,7 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 default.config
 rollup.config.js
-
+tsconfig.json
 
 docker*
 Docker*
