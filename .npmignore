@@ -3,6 +3,7 @@
 .DS_Store
 .git
 .gitlab-ci*
+.github
 .hg
 .npmrc
 .lock-wscript
