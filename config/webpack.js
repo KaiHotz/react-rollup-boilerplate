@@ -2,8 +2,8 @@
 module.exports = {
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      { test: /\.tsx?$/, loader: 'ts-loader' },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -16,14 +16,24 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpg|jpeg|svg|webp|gif)$/,
+        test: /\.(png|jpg|jpeg|webp|gif)$/,
         use: [
-          'file-loader',
+          'url-loader', 'file-loader',
+        ],
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              native: true,
+            },
+          },
         ],
       },
     ],
   },
-  devtool: "source-map",
-  resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx",".json"]  },
-};
+  devtool: 'source-map',
+  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'] },
+}

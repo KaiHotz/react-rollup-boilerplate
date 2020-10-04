@@ -36,7 +36,10 @@
     "predeploy": "npm run styleguide:build",
     "deploy": "gh-pages -d styleguide"
   },
-  "dependencies": {},
+  "dependencies": {
+    "audit": "0.0.6",
+    "fix": "0.0.6"
+  },
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -52,6 +55,7 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-url": "^5.0.1",
     "@svgr/rollup": "^5.4.0",
+    "@svgr/webpack": "^5.4.0",
     "@testing-library/dom": "^7.22.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^10.4.9",
@@ -99,6 +103,7 @@
     "react-dom": "^16.13.1",
     "react-styleguidist": "^11.0.8",
     "react-test-renderer": "^16.13.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.26.5",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-postcss": "^3.1.5",
@@ -109,6 +114,7 @@
     "style-loader": "^1.2.1",
     "ts-loader": "^8.0.2",
     "typescript": "^4.0.2",
+    "url-loader": "^4.1.0",
     "webpack": "^4.44.1"
   },
   "jest": {
@@ -122,8 +128,7 @@
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
-      "react-app-polyfill/jsdom",
-      "<rootDir>/config/enzymeConfig.js"
+      "react-app-polyfill/jsdom"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/config/setupTests.js"
