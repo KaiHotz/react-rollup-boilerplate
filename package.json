@@ -23,9 +23,8 @@
   "scripts": {
     "dev": "NODE_ENV=development BABEL_ENV=development run-p build:watch start",
     "start": "NODE_ENV=development BABEL_ENV=development styleguidist server --open",
-    "clean": "rimraf dist",
     "styleguide:build": "NODE_ENV=production BABEL_ENV=production styleguidist build",
-    "build": "NODE_ENV=production BABEL_ENV=production rollup -c",
+    "build": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
     "build:watch": "rollup -c -w",
     "test": "jest",
     "test:coverage": "jest --coverage --forceExit --colors",
