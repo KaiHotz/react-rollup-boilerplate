@@ -116,6 +116,9 @@ Make sure the repository url in `package.json` file is set to your repoitory url
 ### Bundler
 - [Rollup.js](https://rollupjs.org/guide/en)
 
+### Code Formatter
+- [Prettier](https://prettier.io/)
+
 ### Styleguide
 - [React Styleguidist](https://react-styleguidist.js.org/)
 
