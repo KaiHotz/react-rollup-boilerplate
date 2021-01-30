@@ -100,8 +100,13 @@ Make sure the repository url in `package.json` file is set to your repoitory url
 - `npm run styleguide:build` : Builds the static Styleguide in case you want to deploy it.
 - `npm run test` : Runs the tests.
 - `npm run test:coverage`: Runs the test and shows the coverage.
-- `npm run lint` : Runs the linter.
-- `npm run lint:fix` : Runs the linter and fixes automatic fixable issues.
+- `npm run lint` : Runs the linter, typescipt typecheck and stylelint.
+- `npm run lint:fix` : Runs the linter, typescipt typecheck and stylelint and fixes automatic fixable issues.
+- `npm run eslint`: Runs only the javascipt linter.
+- `npm run eslint:fix`: Runs only the javascipt linter and fixes automatic fixable issues.
+- `npm run stylelint`: Runs only the sytle linter.
+- `npm run stylelint:fix`: Runs only the sytle linter and fixes automatic fixable issues.
+- `npm run check-types`: Runs typescript type checker.
 - `npm run release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file).
 - `npm run deploy`: Deploys the Styleguide to GitHub Pages.
 
@@ -122,7 +127,9 @@ Make sure the repository url in `package.json` file is set to your repoitory url
 ### Linting
 - [ESLint](https://eslint.org/)
 - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-
+- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+- [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
+- [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
 ### Compiler
 - [Babel 7](https://babeljs.io/)
 - [Typescript](https://www.typescriptlang.org/)
