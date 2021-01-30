@@ -95,7 +95,6 @@ Make sure the repository url in `package.json` file is set to your repoitory url
 
 ## Scripts
 
-- `npm run dev` : Executes the develop mode, running watcher and the Stylguide, rebuilding your library on every change.
 - `npm start` : Only serves the Styleguide.
 - `npm run build` : Builds your library  (build can be faound in `dist` folder).
 - `npm run styleguide:build` : Builds the static Styleguide in case you want to deploy it.

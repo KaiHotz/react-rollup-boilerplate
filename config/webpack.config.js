@@ -7,9 +7,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-        ],
+        use: ['babel-loader'],
       },
       {
         test: /\.(s?)css$/,
@@ -17,9 +15,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|webp|gif)$/,
-        use: [
-          'url-loader',
-        ],
+        use: ['url-loader'],
       },
       {
         test: /\.svg$/,
@@ -33,4 +29,4 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'] },
-}
+};

@@ -1,6 +1,6 @@
-const path = require('path')
-const pkg = require('./package.json')
-const webpackConfig = require('./config/webpack.js')
+const path = require('path');
+const pkg = require('./package.json');
+const webpackConfig = require('./config/webpack.config.js');
 
 module.exports = {
   title: `${pkg.name} v${pkg.version}`,
@@ -54,11 +54,11 @@ module.exports = {
   propsParser: require('react-docgen-typescript').withDefaultConfig('./tsconfig.json').parse,
   webpackConfig,
   getExampleFilename(componentPath) {
-    return componentPath.replace(/\.(jsx?|tsx?)$/, '.examples.md')
+    return componentPath.replace(/\.(jsx?|tsx?)$/, '.examples.md');
   },
   getComponentPathLine(componentPath) {
-    const name = path.basename(componentPath, '{.tsx, .jsx}')
+    const name = path.basename(componentPath, '{.tsx, .jsx}');
 
-    return `import { ${name} } from '${pkg.name}';`
+    return `import { ${name} } from '${pkg.name}';`;
   },
-}
+};
