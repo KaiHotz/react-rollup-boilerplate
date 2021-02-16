@@ -1,4 +1,6 @@
 // Webpack configuration
+const webpack = require('webpack');
+
 module.exports = {
   module: {
     rules: [
@@ -29,4 +31,9 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'] },
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+  ],
 };
