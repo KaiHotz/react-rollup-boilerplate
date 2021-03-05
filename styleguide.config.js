@@ -4,9 +4,9 @@ const webpackConfig = require('./config/webpack.config.js');
 
 module.exports = {
   title: `${pkg.name} v${pkg.version}`,
-  components: 'src/lib/components/**/[A-Z]*.{jsx,tsx}',
+  components: 'src/components/**/[A-Z]*.{jsx,tsx}',
   moduleAliases: {
-    [pkg.name]: path.resolve(__dirname, 'src/lib'),
+    [pkg.name]: path.resolve(__dirname, 'src'),
   },
   ribbon: {
     url: 'https://github.com/KaiHotz/react-rollup-boilerplate',

@@ -9,20 +9,14 @@ import url from '@rollup/plugin-url';
 import svgr from '@svgr/rollup';
 import { terser } from 'rollup-plugin-terser';
 
-import pkg from './package.json';
-
 export default {
-  input: 'src/lib/index.ts',
+  input: ['src/index.ts'],
   output: [
     {
-      file: pkg.module,
+      dir: 'dist',
       format: 'es',
-      sourcemap: true,
-    },
-    {
-      file: pkg.main,
-      format: 'cjs',
-      sourcemap: true,
+      preserveModules: true,
+      preserveModulesRoot: 'src'
     },
   ],
   plugins: [
