@@ -196,6 +196,7 @@
       "@babel/plugin-syntax-dynamic-import",
       "@babel/plugin-proposal-class-properties",
       "transform-react-remove-prop-types"
-    ]
+    ],
+    "exclude": "node_modules"
   }
 }
