@@ -17,8 +17,8 @@
   ],
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+    "node": ">=14",
+    "npm": ">=6"
   },
   "scripts": {
     "start": "NODE_ENV=development BABEL_ENV=development styleguidist server --open",
