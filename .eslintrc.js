@@ -1,13 +1,5 @@
 module.exports = {
-  extends: [
-    'airbnb',
-    'eslint:recommended',
-    'plugin:prettier/recommended',
-    'plugin:import/errors',
-    'plugin:import/typescript',
-    'prettier',
-    'prettier/react',
-  ],
+  extends: ['airbnb', 'eslint:recommended', 'plugin:prettier/recommended', 'plugin:import/errors', 'plugin:import/typescript', 'prettier'],
   parser: '@typescript-eslint/parser',
 
   env: {
@@ -160,7 +152,7 @@ module.exports = {
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'prettier/@typescript-eslint',
+        'prettier',
       ],
       plugins: ['@typescript-eslint'],
       rules: {

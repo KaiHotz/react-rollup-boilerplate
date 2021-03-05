@@ -17,7 +17,7 @@ export default {
       dir: 'dist',
       format: 'es',
       preserveModules: true,
-      preserveModulesRoot: 'src'
+      preserveModulesRoot: 'src',
     },
   ],
   plugins: [
