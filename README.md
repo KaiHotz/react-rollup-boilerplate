@@ -10,16 +10,16 @@ There are two methods for getting started with this repo.
 #### Familiar with Git?
 
 ```
-  > git clone git@github.com:KaiHotz/react-rollup-boilerplate.git
-  > cd react-rollup-boilerplate
-  > yarn install
+git clone git@github.com:KaiHotz/react-rollup-boilerplate.git
+cd react-rollup-boilerplate
+yarn install
 ```
 
 #### Not Familiar with Git?
 Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.zip) to download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
-  > yarn install
+yarn install
 ```
 
 
@@ -28,7 +28,7 @@ Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.
 To start the developing run :
 
 ```
-> yarn start
+yarn start
 ```
 
 This will build a version of your library, run the watcher and also run the Styleguide.
@@ -53,11 +53,11 @@ For the use of  `CSS Modules` refere to [rollup-plugin-postcss](https://github.c
 Testing is done with [Jest](https://facebook.github.io/jest/), [Enzyme](http://airbnb.io/enzyme/) and [Jasmine Matchers](https://github.com/JamieMason/Jasmine-Matchers)
 You can refer to `Button.test.js` as an example.
 ```
-> yarn test
+yarn test
 ```
 or (for getting coverage)
 ```
-> yarn test:coverage
+yarn test:coverage
 ```
 
 
@@ -67,11 +67,11 @@ Linting is set up through [ESLint](https://eslint.org/) and configured with  [es
 You can modify linting rules by overriding them in the `.eslintrc.json` file.
 
 ```
-> yarn lint
+yarn lint
 ```
 or (for for automatic fixing if possible)
 ```
-> yarn lint:fix
+yarn lint:fix
 ```
 
 ## Publishing your library to NPM
@@ -79,7 +79,7 @@ or (for for automatic fixing if possible)
 To release your library to NPM or your private Registry, make sure you have an active account at [NPM](https://www.npmjs.com/), your `.npmrc` file is correctly setup and the repository url in `package.json` file is set to your repoitory url, then:
 
 ```
-> yarn release
+yarn release
 ```
 
 ## Styleguide
@@ -90,7 +90,7 @@ For custom layouts, styleing and more information about the Styleguide please re
 Make sure the repository url in `package.json` file is set to your repoitory url, then:
 
 ```
-> yarn deploy
+yarn deploy
 ```
 
 ## Scripts
