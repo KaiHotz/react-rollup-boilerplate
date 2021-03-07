@@ -4,7 +4,7 @@ const webpackConfig = require('./config/webpack.config.js');
 
 module.exports = {
   title: `${pkg.name} v${pkg.version}`,
-  components: 'src/components/**/[A-Z]*.{jsx,tsx}',
+  components: 'src/lib/components/**/[A-Z]*.{jsx,tsx}',
   moduleAliases: {
     [pkg.name]: path.resolve(__dirname, 'src'),
   },
