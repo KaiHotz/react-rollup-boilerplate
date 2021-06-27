@@ -38,6 +38,13 @@
     "strictFunctionTypes": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
+    "noEmit": false,
+    "paths": {
+      "*": [
+        "*",
+        "src/*",
+      ]
+    },
   },
   "include": [
     "src/**/*"

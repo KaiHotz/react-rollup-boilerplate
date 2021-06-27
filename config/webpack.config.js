@@ -4,16 +4,14 @@ const webpack = require('webpack');
 module.exports = {
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: 'ts-loader' },
-      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(jsx?|tsx?)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
       {
         test: /\.(s?)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpg|jpeg|webp|gif)$/,
@@ -21,15 +19,23 @@ module.exports = {
       },
       {
         test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      },
+      {
+        test: /\.woff(2)?$/,
         use: [
           {
-            loader: '@svgr/webpack',
+            loader: 'file-loader',
+            options: {
+              limit: 10000,
+              name: '[name].[ext]',
+              mimetype: 'application/font-woff',
+            },
           },
         ],
       },
     ],
   },
-  devtool: 'source-map',
   resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'] },
   plugins: [
     new webpack.ProvidePlugin({
