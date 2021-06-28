@@ -23,7 +23,6 @@ export default {
     postcss({
       minimize: false,
       inject: false,
-      extract: true,
     }),
     external({
       includeDependencies: true,
@@ -31,21 +30,7 @@ export default {
     typescript({
       typescript: typescriptEngine,
       include: ['*.js+(|x)', '**/*.js+(|x)'],
-      exclude: [
-        'coverage',
-        '.storybook',
-        'rollup.config.js',
-        '.babelrc.js',
-        'config',
-        'dist',
-        'test/',
-        'node_modules/**',
-        '**/__snapshots__/*',
-        '*.test.{js+(|x), ts+(|x)}',
-        '**/*.test.{js+(|x), ts+(|x)}',
-        '*.story.{js+(|x), ts+(|x)}',
-        '**/*.story.{js+(|x), ts+(|x)}',
-      ],
+      exclude: ['coverage', 'config', 'dist', 'node_modules/**', '*.test.{js+(|x), ts+(|x)}', '**/*.test.{js+(|x), ts+(|x)}'],
     }),
     babel({
       extensions: ['.js', '.ts', 'tsx', 'jsx'],

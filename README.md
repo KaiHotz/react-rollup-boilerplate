@@ -123,7 +123,6 @@ yarn deploy
 - [React Styleguidist](https://react-styleguidist.js.org/)
 
 ### Testing
-- [Jasmine Matchers](https://github.com/JamieMason/Jasmine-Matchers)
 - [Enzyme](http://airbnb.io/enzyme/)
 - [Jest](https://facebook.github.io/jest/)
 
