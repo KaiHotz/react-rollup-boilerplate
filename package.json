@@ -36,7 +36,7 @@
     "check-types": "tsc",
     "prepare": "yarn build",
     "prerelease": "yarn lint:fix && yarn test:coverage",
-    "release": "npm publish",
+    "release": "yarn publish",
     "predeploy": "yarn styleguide:build",
     "deploy": "gh-pages -d styleguide"
   },
