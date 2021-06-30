@@ -13,6 +13,14 @@
 .editorconfig
 .eslint*
 .yarnrc
+.babelrc.js
+.stylelintrc.js
+.stylelintignore
+jest.config.js
+jest.setup.js
+postcss.config.js
+prettier.config.js
+
 
 config.gypi
 CVS
@@ -34,6 +42,3 @@ public
 src
 scripts
 styleguide*
-
-
-
