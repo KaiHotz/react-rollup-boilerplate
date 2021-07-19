@@ -33,7 +33,7 @@ yarn start
 
 This will build a version of your library, run the watcher and also run the Styleguide.
 To open the Styleguide manualy open your Browser and navigate to [http://localhost:6060](http://localhost:6060).
-Start developing your components in `src/lib/components` folder and update the `src/lib/index.js` file acordingly.
+Start developing your components in `src/components` folder and update the `src/index.js` file acordingly.
 Always provide an `YourComponent.examples.md` file, so your component will show up in the Styleguide.
 You can refer to example `Button` component, but i think you'll get the idea.
 
