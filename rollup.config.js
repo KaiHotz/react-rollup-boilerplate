@@ -1,3 +1,4 @@
+import { DEFAULT_EXTENSIONS } from '@babel/core';
 import babel from '@rollup/plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
 import commonjs from '@rollup/plugin-commonjs';
@@ -25,6 +26,7 @@ export default {
   ],
   plugins: [
     postcss({
+      plugins: [],
       minimize: true,
     }),
     external({
@@ -35,15 +37,15 @@ export default {
       include: ['*.js+(|x)', '**/*.js+(|x)'],
       exclude: ['coverage', 'config', 'dist', 'node_modules/**', '*.test.{js+(|x), ts+(|x)}', '**/*.test.{js+(|x), ts+(|x)}'],
     }),
+    commonjs(),
     babel({
-      extensions: ['.js', '.ts', 'tsx', 'jsx'],
+      extensions: [...DEFAULT_EXTENSIONS, '.ts', 'tsx'],
       babelHelpers: 'runtime',
       exclude: /node_modules/,
     }),
     url(),
     svgr(),
     resolve(),
-    commonjs(),
     terser(),
   ],
 };
