@@ -57,7 +57,7 @@ module.exports = {
     return componentPath.replace(/\.(jsx?|tsx?)$/, '.examples.md');
   },
   getComponentPathLine(componentPath) {
-    const name = path.basename(componentPath, '{.tsx, .jsx}');
+    const name = path.basename(componentPath, '{.tsx, .jsx}').replace(/\.(jsx?|tsx?)$/, '');
 
     return `import { ${name} } from '${pkg.name}';`;
   },
