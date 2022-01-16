@@ -11,7 +11,7 @@ import { terser } from 'rollup-plugin-terser';
 import typescriptEngine from 'typescript';
 import pkg from './package.json';
 
-export default {
+const config = {
   input: 'src/index.ts',
   output: [
     {
@@ -50,3 +50,5 @@ export default {
     terser(),
   ],
 };
+
+export default config;
