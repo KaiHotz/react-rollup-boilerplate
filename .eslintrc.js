@@ -1,7 +1,7 @@
 const prettierConfig = require('./prettier.config');
 
 module.exports = {
-  extends: ['react-app', 'react-app/jest', 'prettier'],
+  extends: ['react-app', 'react-app/jest', 'prettier', 'plugin:storybook/recommended'],
   plugins: ['react-hooks', 'prettier'],
   env: {
     browser: true,
@@ -20,5 +20,6 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', prettierConfig],
     'newline-before-return': 'error',
+    'import/no-anonymous-default-export': 0,
   },
 };

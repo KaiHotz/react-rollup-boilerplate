@@ -1,7 +1,5 @@
-// Webpack configuration
-const webpack = require('webpack');
-
 module.exports = {
+  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'] },
   module: {
     rules: [
       {
@@ -11,7 +9,7 @@ module.exports = {
       },
       {
         test: /\.(s?)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpg|jpeg|webp|gif)$/,
@@ -36,10 +34,4 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'] },
-  plugins: [
-    new webpack.ProvidePlugin({
-      process: 'process/browser',
-    }),
-  ],
 };

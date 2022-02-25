@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  background: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}

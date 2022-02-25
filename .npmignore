@@ -16,11 +16,11 @@
 .babelrc.js
 .stylelintrc.js
 .stylelintignore
+.storybook
 jest.config.js
 jest.setup.js
 postcss.config.js
 prettier.config.js
-
 
 config.gypi
 CVS
@@ -41,4 +41,5 @@ demo
 public
 src
 scripts
-styleguide*
+storybook-static
+
