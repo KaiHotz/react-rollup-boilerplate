@@ -21,5 +21,4 @@ module.exports = {
   },
   'moduleFileExtensions': ['js', 'jsx', 'json', 'ts', 'tsx'],
   'watchPlugins': ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
-  'snapshotSerializers': ['enzyme-to-json/serializer'],
 };

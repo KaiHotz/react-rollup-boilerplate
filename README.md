@@ -67,7 +67,8 @@ yarn test:coverage
 
 ## Linting
 
-Linting is set up through [ESLint](https://eslint.org/) and configured with  [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+Linting is set up through [ESLint](https://eslint.org/) and configured with  [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app) and
+[eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
 You can modify linting rules by overriding them in the `.eslintrc.json` file.
 
 ```
@@ -133,8 +134,8 @@ yarn deploy
 
 ### Linting
 - [ESLint](https://eslint.org/)
-- [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+- [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app)
 - [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
 - [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
 ### Compiler

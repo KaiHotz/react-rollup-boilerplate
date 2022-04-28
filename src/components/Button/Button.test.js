@@ -1,37 +1,40 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Button } from './Button';
+
+const defaultProps = {
+  onClick: jest.fn(),
+  text: "Button",
+};
+
 
 describe('<Button />', () => {
   it('should render', () => {
-    const wrapper = shallow(<Button />);
+    render(<Button  {...defaultProps} />);
 
-    expect(wrapper).toBeDefined();
+    expect(screen.getByText(/Button/i)).toBeInTheDocument();
   });
 
   it('should call onClick', () => {
-    const props = {
-      onClick: jest.fn(),
-    };
-    const wrapper = shallow(<Button {...props} />);
-    wrapper.simulate('click');
+    render(<Button {...defaultProps} />);
+    fireEvent.click(screen.getByText(/Button/i))
 
-    expect(props.onClick).toHaveBeenCalled();
+    expect(defaultProps.onClick).toHaveBeenCalledTimes(1);
   });
 
   it('should be disableable', () => {
-    const wrapper = shallow(<Button disabled />);
+    render(<Button  {...defaultProps} disabled />);
 
-    expect(wrapper.prop('disabled')).toBe(true);
+    expect(screen.getByText('Button')).toHaveProperty('disabled');
   });
 
   it('should allow custom className', () => {
     const props = {
+      ...defaultProps,
       className: 'Custom',
     };
-    const wrapper = shallow(<Button {...props} />);
+    render(<Button {...props} />);
 
-    expect(wrapper.hasClass(props.className)).toBe(true);
+    expect(screen.getByText('Button')).toHaveProperty('className');
   });
 });
