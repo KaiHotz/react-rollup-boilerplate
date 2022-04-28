@@ -54,7 +54,7 @@ For the use of  `CSS Modules` refer to [rollup-plugin-postcss](https://github.co
 
 ## Testing
 
-Testing is done with [Jest](https://facebook.github.io/jest/), [Enzyme](http://airbnb.io/enzyme/) and [Jasmine Matchers](https://github.com/JamieMason/Jasmine-Matchers)
+Testing is done with [Jest](https://facebook.github.io/jest/) and [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 You can refer to `Button.test.js` as an example.
 ```
 yarn test
@@ -129,8 +129,8 @@ yarn deploy
 - [Storybook](https://storybook.js.org/)
 
 ### Testing
-- [Enzyme](http://airbnb.io/enzyme/)
 - [Jest](https://facebook.github.io/jest/)
+- [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 
 ### Linting
 - [ESLint](https://eslint.org/)
