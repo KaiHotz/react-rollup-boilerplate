@@ -4,26 +4,25 @@ import { Button } from './Button';
 
 const defaultProps = {
   onClick: jest.fn(),
-  text: "Button",
+  text: 'Button',
 };
-
 
 describe('<Button />', () => {
   it('should render', () => {
-    render(<Button  {...defaultProps} />);
+    render(<Button {...defaultProps} />);
 
     expect(screen.getByText(/Button/i)).toBeInTheDocument();
   });
 
   it('should call onClick', () => {
     render(<Button {...defaultProps} />);
-    fireEvent.click(screen.getByText(/Button/i))
+    fireEvent.click(screen.getByText(/Button/i));
 
     expect(defaultProps.onClick).toHaveBeenCalledTimes(1);
   });
 
   it('should be disableable', () => {
-    render(<Button  {...defaultProps} disabled />);
+    render(<Button {...defaultProps} disabled />);
 
     expect(screen.getByText('Button')).toHaveProperty('disabled');
   });
