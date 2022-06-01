@@ -7,5 +7,5 @@ export default {
 };
 
 export const Default: FC = () => {
-  return <Button text="hello world" onClick={() => console.log('click')} />;
+  return <Button onClick={() => console.log('click')}>hello world</Button>;
 };

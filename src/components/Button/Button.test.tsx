@@ -4,19 +4,19 @@ import { Button } from './Button';
 
 const defaultProps = {
   onClick: jest.fn(),
-  text: 'Button',
+  children: 'Button',
 };
 
 describe('<Button />', () => {
   it('should render', () => {
     render(<Button {...defaultProps} />);
 
-    expect(screen.getByText(/Button/i)).toBeInTheDocument();
+    expect(screen.getByTestId('button-comp')).toMatchSnapshot();
   });
 
   it('should call onClick', () => {
     render(<Button {...defaultProps} />);
-    fireEvent.click(screen.getByText(/Button/i));
+    fireEvent.click(screen.getByTestId('button-comp'));
 
     expect(defaultProps.onClick).toHaveBeenCalledTimes(1);
   });
@@ -24,7 +24,13 @@ describe('<Button />', () => {
   it('should be disableable', () => {
     render(<Button {...defaultProps} disabled />);
 
-    expect(screen.getByText('Button')).toHaveProperty('disabled');
+    expect(screen.getByTestId('button-comp')).toHaveProperty('disabled');
+  });
+
+  it('should render children', () => {
+    render(<Button {...defaultProps} disabled />);
+
+    expect(screen.getByText(/Button/i)).toBeInTheDocument();
   });
 
   it('should allow custom className', () => {
@@ -34,6 +40,6 @@ describe('<Button />', () => {
     };
     render(<Button {...props} />);
 
-    expect(screen.getByText('Button')).toHaveProperty('className');
+    expect(screen.getByTestId('button-comp')).toHaveProperty('className');
   });
 });
