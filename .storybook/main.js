@@ -15,7 +15,8 @@ module.exports = {
     'storybook-addon-react-docgen',
     '@storybook/addon-actions',
     '@storybook/addon-links',
-    '@storybook/addon-postcss'
+    '@storybook/addon-postcss',
+    '@storybook/addon-docs',
   ],
   webpackFinal: config => {
     return { ...config,
