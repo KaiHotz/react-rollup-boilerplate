@@ -16,6 +16,7 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-links',
     '@storybook/addon-postcss',
+    '@storybook/addon-essentials',
     '@storybook/addon-docs',
   ],
   webpackFinal: config => {
