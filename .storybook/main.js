@@ -12,12 +12,21 @@ module.exports = {
   addons: [
     '@storybook/preset-scss',
     '@storybook/preset-typescript',
-    'storybook-addon-react-docgen',
     '@storybook/addon-actions',
     '@storybook/addon-links',
-    '@storybook/addon-postcss',
     '@storybook/addon-essentials',
-    '@storybook/addon-docs',
+    {
+      name: '@storybook/addon-docs',
+      options: { configureJSX: true }
+    },
+    {
+     name: '@storybook/addon-postcss',
+     options: {
+       postcssLoaderOptions: {
+         implementation: require('postcss'),
+       },
+     },
+   },
   ],
   webpackFinal: config => {
     return { ...config,
