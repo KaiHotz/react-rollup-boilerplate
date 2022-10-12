@@ -1,4 +1,4 @@
-name: UI-Kit
+name: react-rollup-boilerplate
 
 on:
   pull_request:
