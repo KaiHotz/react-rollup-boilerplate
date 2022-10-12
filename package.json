@@ -46,6 +46,9 @@
     "react": "18.x",
     "react-dom": "18.x"
   },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
@@ -68,7 +71,6 @@
     "@storybook/addon-controls": "^6.5.12",
     "@storybook/addon-docs": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
-    "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.5.12",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.5.12",
@@ -150,7 +152,14 @@
     "webpack": "^5.74.0",
     "yarn-audit-fix": "^9.3.6"
   },
-  "dependencies": {
-    "classnames": "^2.3.2"
+  "resolutions": {
+    "node-fetch": "^2.6.7",
+    "glob-parent": "^6.0.1",
+    "highlight.js": "^11.6.0",
+    "prismjs": "^1.21.0",
+    "got": "^11.8.5",
+    "trim-newlines": "^3.0.1",
+    "trim": "^0.0.3",
+    "postcss": "^8.4.17"
   }
 }
