@@ -1,0 +1,23 @@
+name: UI-Kit
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  continuous-integration:
+    runs-on: [ self-hosted, linux ]
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: |
+        corepack enable
+        yarn install --frozen-lockfile
+
+    - name: Run Continuous Integration
+      run: |
+        yarn ci
