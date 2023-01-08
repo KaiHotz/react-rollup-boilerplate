@@ -18,13 +18,13 @@ const config = {
       file: pkg.main,
       format: 'cjs',
       exports: 'named',
-      sourcemap: true,
+      sourcemap: false,
     },
     {
       file: pkg.module,
       format: 'es',
       exports: 'named',
-      sourcemap: true,
+      sourcemap: false,
     },
   ],
   plugins: [
@@ -40,6 +40,7 @@ const config = {
       typescript: typescriptEngine,
       include: ['*.js+(|x)', '**/*.js+(|x)'],
       exclude: ['coverage', 'config', 'dist', 'node_modules/**', '*.test.{js+(|x), ts+(|x)}', '**/*.test.{js+(|x), ts+(|x)}'],
+      sourceMap: false,
     }),
     commonjs(),
     babel({

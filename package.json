@@ -160,6 +160,8 @@
     "got": "^11.8.5",
     "trim-newlines": "^3.0.1",
     "trim": "^0.0.3",
-    "postcss": "^8.4.17"
+    "postcss": "^8.4.17",
+    "loader-utils": "^1.4.1",
+    "json5": "^1.0.2"
   }
 }
