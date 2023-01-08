@@ -1,6 +1,6 @@
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import babel from '@rollup/plugin-babel';
-import rpt2 from '@rollup/plugin-typescript';
+import typescript from '@rollup/plugin-typescript';
 import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
@@ -35,7 +35,7 @@ const config = {
     external({
       includeDependencies: true,
     }),
-    rpt2({
+    typescript({
       tsconfig: './tsconfig.json',
       typescript: typescriptEngine,
       include: ['*.js+(|x)', '**/*.js+(|x)'],
