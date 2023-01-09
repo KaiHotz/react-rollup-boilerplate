@@ -54,7 +54,7 @@
     "config",
     "dist",
     "node_modules/**",
-    "**/*.test.js",
-    "**/*.test.ts",
+    "*.test.{js+(|x), ts+(|x)}",
+    "**/*.test.{js+(|x), ts+(|x)}"
   ]
 }

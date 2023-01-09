@@ -38,8 +38,6 @@ const config = {
     typescript({
       tsconfig: './tsconfig.json',
       typescript: typescriptEngine,
-      include: ['*.js+(|x)', '**/*.js+(|x)'],
-      exclude: ['coverage', 'config', 'dist', 'node_modules/**', '*.test.{js+(|x), ts+(|x)}', '**/*.test.{js+(|x), ts+(|x)}'],
       sourceMap: false,
     }),
     commonjs(),
