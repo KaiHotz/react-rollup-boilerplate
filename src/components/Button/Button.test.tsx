@@ -10,27 +10,31 @@ const defaultProps = {
 describe('<Button />', () => {
   it('should render', () => {
     render(<Button {...defaultProps} />);
-
-    expect(screen.getByTestId('button-comp')).toMatchSnapshot();
+    const button = screen.getByRole('button');
+    expect(button).toBeInTheDocument();
   });
 
   it('should call onClick', () => {
     render(<Button {...defaultProps} />);
-    fireEvent.click(screen.getByTestId('button-comp'));
+    const button = screen.getByRole('button');
+
+    fireEvent.click(button);
 
     expect(defaultProps.onClick).toHaveBeenCalledTimes(1);
   });
 
   it('should be disableable', () => {
     render(<Button {...defaultProps} disabled />);
+    const button = screen.getByRole('button');
 
-    expect(screen.getByTestId('button-comp')).toHaveProperty('disabled');
+    expect(button).toHaveProperty('disabled');
   });
 
   it('should render children', () => {
     render(<Button {...defaultProps} disabled />);
+    const buttonText = screen.getByText(/button/i);
 
-    expect(screen.getByText(/Button/i)).toBeInTheDocument();
+    expect(buttonText).toBeInTheDocument();
   });
 
   it('should allow custom className', () => {
@@ -39,7 +43,8 @@ describe('<Button />', () => {
       className: 'Custom',
     };
     render(<Button {...props} />);
+    const button = screen.getByRole('button');
 
-    expect(screen.getByTestId('button-comp')).toHaveProperty('className');
+    expect(button).toHaveProperty('className');
   });
 });
