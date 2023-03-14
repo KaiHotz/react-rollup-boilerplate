@@ -149,7 +149,7 @@
     "ts-toolbelt": "^9.6.0",
     "typescript": "^4.9.4",
     "url-loader": "^4.1.1",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.0",
     "yarn-audit-fix": "^9.3.8"
   },
   "resolutions": {
