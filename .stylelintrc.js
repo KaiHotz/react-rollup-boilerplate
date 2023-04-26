@@ -48,8 +48,6 @@ module.exports = {
     'number-max-precision': 4,
     'value-no-vendor-prefix': true,
     'unit-no-unknown': true,
-    'number-leading-zero': 'always',
-    'number-no-trailing-zeros': true,
     'length-zero-no-unit': true,
 
     // Colors
