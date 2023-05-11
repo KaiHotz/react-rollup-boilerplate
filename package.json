@@ -1,6 +1,6 @@
 {
   "name": "react-rollup-boilerplate",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and Storybookt",
   "author": "Kai Hotz",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=14.18.0",
+    "node": ">=16",
     "npm": ">=6"
   },
   "scripts": {
