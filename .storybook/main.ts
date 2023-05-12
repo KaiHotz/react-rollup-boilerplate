@@ -3,6 +3,8 @@ import custom from './webpack.config.js';
 
 const config: StorybookConfig = {
   stories: [
+    '../src/components/**/*.stories.mdx',
+    '../src/components/**/*.story.mdx',
     '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
     '../src/components/**/*.story.@(js|jsx|ts|tsx)'
   ],
