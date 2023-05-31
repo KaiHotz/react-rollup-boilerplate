@@ -22,7 +22,9 @@ export const Tabs: FC<ITabsProps> = ({ id, children, testId }) => {
 
   return (
     <div id={id} data-testId={testId}>
-      <TabListContext.Provider value={{ selected: selectedTabIndex, onTabChange, tabsId: id }}>{tabList}</TabListContext.Provider>
+      <TabListContext.Provider value={{ selected: selectedTabIndex, onTabChange, tabsId: id }}>
+        {tabList}
+      </TabListContext.Provider>
       <TabPanelContext.Provider
         value={{
           role: 'tabpanel',

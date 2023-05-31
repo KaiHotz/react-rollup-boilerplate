@@ -39,6 +39,23 @@ const config = {
       tsconfig: './tsconfig.json',
       typescript: typescriptEngine,
       sourceMap: false,
+      tsconfigOverride: {
+        exclude: [
+          '**/__tests__',
+          '**/*.test.ts',
+          '**/*.test.tsx',
+          '**/*.test.js',
+          '**/*.test.jsx',
+          '**/*.story.js',
+          '**/*.story.jsx',
+          '**/*.story.ts',
+          '**/*.story.tsx',
+          '**/*.stories.js',
+          '**/*.stories.jsx',
+          '**/*.stories.ts',
+          '**/*.stories.tsx',
+        ],
+      },
     }),
     commonjs(),
     babel({
