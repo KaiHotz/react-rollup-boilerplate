@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "noEmit": false,
     "declarationDir": "./dist",
-    "module": "esnext",
-    "noImplicitAny": true,
-    "outDir": "./dist",
     "target": "es5",
+    "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": "./src",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "outDir": "./dist",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "paths": {
+      "*": [
+        "*",
+      ]
+    },
     "allowJs": true,
     "isolatedModules": true,
+    "noImplicitAny": true,
     "jsx": "react",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "strict": true,
-    "pretty": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "downlevelIteration": true,
@@ -27,33 +29,15 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "stripInternal": true,
-    "emitDecoratorMetadata": false,
-    "experimentalDecorators": false,
-    "strictPropertyInitialization": true,
-    "importHelpers": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noEmit": false,
-    "paths": {
-      "*": [
-        "*",
-        "src/*",
-      ]
-    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src",
-    ".eslintrc.cjs"
   ],
   "exclude": [
     "coverage",
     "config",
     "dist",
-    "node_modules/**",
+    "node_modules/**"
   ]
 }
