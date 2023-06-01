@@ -1,15 +1,15 @@
-import React, { FC, ReactNode, useState, useMemo, useCallback } from 'react';
+import React, { FC, Children, ReactNode, useState, useMemo, useCallback } from 'react';
 import { TabListContext, TabPanelContext } from './context';
 
 export interface ITabsProps {
-  id: string;
   children: ReactNode;
+  id?: string;
   testId?: string;
 }
 
-export const Tabs: FC<ITabsProps> = ({ id, children, testId }) => {
+export const Tabs: FC<ITabsProps> = ({ id = 'tab', children, testId }) => {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
-  const childrenArray = React.Children.toArray(children);
+  const childrenArray = Children.toArray(children);
   // with this API we expect the first child to be a list of tabs
   // followed by a list of tab panels that correspond to those tabs
   // the ordering is determined by the position of the elements
