@@ -140,7 +140,7 @@
     "sass-loader": "^13.3.1",
     "storybook": "^7.0.18",
     "style-loader": "^3.3.3",
-    "stylelint": "^15.6.2",
+    "stylelint": "^15.10.1",
     "stylelint-prettier": "^3.0.0",
     "stylelint-scss": "^5.0.0",
     "ts-toolbelt": "^9.6.0",
