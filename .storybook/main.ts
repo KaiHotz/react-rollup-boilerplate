@@ -1,5 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import custom from './webpack.config.cjs';
+import { merge } from "lodash"
 
 const config: StorybookConfig = {
   stories: [
@@ -23,17 +24,8 @@ const config: StorybookConfig = {
     },
   ],
   webpackFinal: async config => {
-    return {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        ...custom.resolve
-      },
-      module: {
-        ...config.module,
-        rules: custom.module.rules
-      }
-    };
+    const newConfig = merge(config, custom);
+    return newConfig;
   },
   framework: {
     name: '@storybook/react-webpack5',

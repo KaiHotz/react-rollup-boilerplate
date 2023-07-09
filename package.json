@@ -47,7 +47,8 @@
     "react-dom": "18.x"
   },
   "dependencies": {
-    "clsx": "^1.2.1"
+    "clsx": "^1.2.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@babel/core": "^7.22.8",
