@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { useTab } from './context';
-import cx from 'classnames';
+import cx from 'clsx';
 import './Tab.scss';
 
 export interface ITabProps {
