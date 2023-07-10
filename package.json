@@ -47,8 +47,7 @@
     "react-dom": "18.x"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
-    "lodash": "^4.17.21"
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.22.8",
@@ -76,6 +75,7 @@
     "@storybook/blocks": "^7.0.26",
     "@storybook/node-logger": "^7.0.26",
     "@storybook/react": "^7.0.26",
+    "@storybook/react-vite": "^7.0.26",
     "@storybook/react-webpack5": "^7.0.26",
     "@storybook/testing-library": "^0.2.0",
     "@svgr/rollup": "^8.0.1",
@@ -123,6 +123,7 @@
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.8",
     "process": "^0.11.10",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-app-polyfill": "^3.0.0",
     "react-docgen-typescript": "^2.2.2",
@@ -149,6 +150,7 @@
     "tslib": "^2.6.0",
     "typescript": "^5.1.6",
     "url-loader": "^4.1.1",
+    "vite": "^4.4.2",
     "webpack": "^5.88.1",
     "yarn-audit-fix": "^9.3.12"
   },

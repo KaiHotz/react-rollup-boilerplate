@@ -1,9 +1,9 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
-import custom from './webpack.config.cjs';
-import { merge } from "lodash"
+import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: [
+    '../src/**/*.mdx',
+    '../src/**/*.stories.@(js|jsx|ts|tsx)',
     '../src/components/**/*.stories.mdx',
     '../src/components/**/*.story.mdx',
     '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
@@ -23,13 +23,9 @@ const config: StorybookConfig = {
       }
     },
   ],
-  webpackFinal: async config => {
-    const newConfig = merge(config, custom);
-    return newConfig;
-  },
   framework: {
-    name: '@storybook/react-webpack5',
-    options: {}
+    name: '@storybook/react-vite',
+    options: {},
   },
   docs: {
     autodocs: true,
