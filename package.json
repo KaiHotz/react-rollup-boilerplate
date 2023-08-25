@@ -38,7 +38,6 @@
     "storybook:build": "storybook build",
     "predeploy": "yarn storybook:build",
     "deploy": "gh-pages -d storybook-static"
-
   },
   "peerDependencies": {
     "react": "18.x",
