@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "noEmit": false,
-    "declarationDir": "./dist",
-    "target": "es5",
+    "target": "es2016",
     "module": "esnext",
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationDir": "types",
+
+    "noEmit": false,
     "baseUrl": "./src",
-    "outDir": "./dist",
     "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
       "*": [
@@ -17,23 +25,16 @@
     "allowJs": true,
     "isolatedModules": true,
     "noImplicitAny": true,
-    "jsx": "react",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "downlevelIteration": true,
-    "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "types": ["@testing-library/jest-dom"],
   },
-  "include": [
-    "src",
-  ],
+  "include": ["src"],
   "exclude": [
     "coverage",
     "config",

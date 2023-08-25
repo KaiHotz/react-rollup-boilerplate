@@ -63,7 +63,7 @@ yarn test:coverage
 
 Linting is set up through [ESLint](https://eslint.org/) and configured with  [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app) and
 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
-You can modify linting rules by overriding them in the `.eslintrc.json` file.
+You can modify linting rules by overriding them in the `.eslintrc.cjs` file.
 
 ```
 yarn lint
@@ -75,7 +75,7 @@ yarn lint:fix
 
 ## Publishing your library to NPM
 
-To release your library to NPM or your private Registry, make sure you have an active account at [NPM](https://www.npmjs.com/), your `.npmrc` file is correctly setup and the repository url in `package.json` file is set to your repository url, then:
+To release your library to NPM or your private Registry, make sure you have an active account at [NPM](https://www.npmjs.com/), your `.npmrc` file is correctly setup and the registry url at publishConfig in `package.json` file is set to your repository url, then:
 
 ```
 yarn release
@@ -87,7 +87,7 @@ For custom layouts, styling and more information about Storybook, please refer t
 
 #### Deploy Storybook to GitHub Pages
 
-Make sure the repository url in `package.json` file is set to your repository url, then:
+Make sure the homepage url in `package.json` file is set to your githup pages url, then:
 
 ```
 yarn deploy
@@ -107,9 +107,12 @@ yarn deploy
 - `yarn stylelint`: Runs only the style linter.
 - `yarn stylelint:fix`: Runs only the style linter and fixes automatic fixable issues.
 - `yarn check-types`: Runs typescript type checker.
+- `yarn ci`: Runs Linting, tests and type checker all together.
 - `yarn release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file).
-- `yarn deploy`: Deploys the Styleguide to GitHub Pages.
-
+- `yarn deploy`: Builds and deploys Storybook to GitHub Pages.
+- `yarn audit:fix`: Is similar to npm audit --fix, it checks dependencies for reported vulnerabilities and tire to patch them.
+- `yarn storybook`: Same as yarn start, to serve storybook.
+- `yarn storybook:build`: Generates rthe build for storybook to be deployed wherever you need.
 
 ## Resources
 
@@ -123,8 +126,9 @@ yarn deploy
 - [Storybook](https://storybook.js.org/)
 
 ### Testing
-- [Jest](https://facebook.github.io/jest/)
+- [Vitest](https://vitest.dev/)
 - [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
+- [@testing-library/jest-dom](https://github.com/testing-library/jest-dom)
 
 ### Linting
 - [ESLint](https://eslint.org/)
@@ -133,5 +137,4 @@ yarn deploy
 - [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
 - [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
 ### Compiler
-- [Babel 7](https://babeljs.io/)
 - [Typescript](https://www.typescriptlang.org/)
