@@ -36,8 +36,7 @@
     "release": "yarn publish",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "predeploy": "yarn storybook:build",
-    "deploy": "gh-pages -d storybook-static"
+    "storybook:deploy": "yarn storybook:build && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true"
   },
   "peerDependencies": {
     "react": "18.x",
