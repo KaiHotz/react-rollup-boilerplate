@@ -40,6 +40,7 @@ module.exports = {
     'src/graphql/generated/*',
   ],
   rules: {
+    'newline-before-return': 'error',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'no-console': 'warn',
@@ -123,6 +124,7 @@ module.exports = {
     },
     {
       files: [
+        '*story.*',
         '*stories.*',
         'src/pages/**/*.tsx',
         'additional.d.ts',
