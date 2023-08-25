@@ -1,13 +1,9 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 
 import { useTabPanel } from './context';
 import './TabPanel.scss';
 
-export interface ITabPanelProps {
-  children: ReactNode;
-}
-
-export const TabPanel: FC<ITabPanelProps> = ({ children }) => {
+export const TabPanel: FC<PropsWithChildren> = ({ children }) => {
   const tabPanelAttributes = useTabPanel();
 
   return (

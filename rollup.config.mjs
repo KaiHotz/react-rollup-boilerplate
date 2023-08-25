@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import { readFileSync } from 'fs';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
@@ -9,7 +9,7 @@ import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 import { terser } from 'rollup-plugin-terser';
 
-const packageJson = JSON.parse(readFileSync("./package.json"));
+const packageJson = JSON.parse(readFileSync('./package.json'));
 
 export default [
   {
@@ -19,13 +19,13 @@ export default [
         file: packageJson.main,
         format: 'cjs',
         sourcemap: false,
-        name: 'react-ts-lib'
+        name: packageJson.name,
       },
       {
         file: packageJson.module,
         format: 'esm',
         sourcemap: false,
-      }
+      },
     ],
     plugins: [
       external(),
@@ -57,13 +57,13 @@ export default [
       url(),
       svgr(),
       postcss(),
-      terser()
+      terser(),
     ],
   },
   {
     input: 'dist/esm/types/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: "esm" }],
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.(sc|sa|c)ss$/],
     plugins: [dts()],
   },
-]
+];

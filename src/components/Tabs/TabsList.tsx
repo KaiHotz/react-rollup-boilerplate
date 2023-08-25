@@ -1,13 +1,9 @@
-import React, { FC, ReactNode, createRef, useCallback } from 'react';
+import React, { FC, createRef, useCallback, PropsWithChildren } from 'react';
 
 import { TabContext, useTabList } from './context';
 import './TabsList.scss';
 
-export interface ITabsListProps {
-  children: ReactNode;
-}
-
-export const TabsList: FC<ITabsListProps> = ({ children }) => {
+export const TabsList: FC<PropsWithChildren> = ({ children }) => {
   // provided by top level Tabs component coming up next
   const { tabsId, selected, onTabChange } = useTabList();
 

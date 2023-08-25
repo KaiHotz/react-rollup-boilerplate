@@ -1,2 +1,1 @@
-export { Button } from './Button';
-export type { IButtonProps } from './Button';
+export * from './Button';

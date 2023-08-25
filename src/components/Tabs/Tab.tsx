@@ -1,14 +1,10 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import cx from 'clsx';
 
 import { useTab } from './context';
 import './Tab.scss';
 
-export interface ITabProps {
-  children: ReactNode;
-}
-
-export const Tab: FC<ITabProps> = ({ children }) => {
+export const Tab: FC<PropsWithChildren> = ({ children }) => {
   const tabAttributes = useTab();
 
   return (

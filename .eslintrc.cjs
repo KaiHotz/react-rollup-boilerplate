@@ -7,9 +7,9 @@ module.exports = {
     'plugin:storybook/recommended',
     'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
-    'prettier',
+    'plugin:prettier/recommended'
   ],
-  plugins: ['react', 'react-hooks', 'storybook', 'import', 'jsx-a11y'],
+  plugins: ['react', 'react-hooks', 'storybook', 'import', 'jsx-a11y', 'prettier'],
   env: {
     node: true,
     browser: true,
