@@ -40,7 +40,8 @@
   },
   "peerDependencies": {
     "react": "18.x",
-    "react-dom": "18.x"
+    "react-dom": "18.x",
+    "clsx": "2.x"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.4",
