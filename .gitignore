@@ -3,6 +3,7 @@
 
 # dependencies
 node_modules
+.yarn/cache
 
 # builds
 build

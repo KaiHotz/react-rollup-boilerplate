@@ -1,78 +1,68 @@
-import { DEFAULT_EXTENSIONS } from '@babel/core';
-import babel from '@rollup/plugin-babel';
-import typescript from 'rollup-plugin-typescript2';
-import commonjs from '@rollup/plugin-commonjs';
-import external from 'rollup-plugin-peer-deps-external';
-import postcss from 'rollup-plugin-postcss';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
 import url from '@rollup/plugin-url';
 import svgr from '@svgr/rollup';
+import external from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
+import dts from 'rollup-plugin-dts';
 import { terser } from 'rollup-plugin-terser';
-import typescriptEngine from 'typescript';
-import pkg from './package.json' assert { type: 'json' };
 
-const config = {
-  input: './src/index.ts',
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-      exports: 'named',
-      sourcemap: false,
-    },
-    {
-      file: pkg.module,
-      format: 'es',
-      exports: 'named',
-      sourcemap: false,
-    },
-  ],
-  plugins: [
-    postcss({
-      plugins: [],
-      minimize: true,
-    }),
-    external({
-      includeDependencies: true,
-    }),
-    typescript({
-      tsconfig: './tsconfig.json',
-      typescript: typescriptEngine,
-      include: ['*.js+(|x)', '**/*.js+(|x)', '*.ts+(|x)', '**/*.ts+(|x)'],
-      exclude: [
-        'coverage',
-        '.storybook',
-        'storybook-static',
-        'config',
-        'dist',
-        'node_modules/**',
-        '*.cjs',
-        '*.mjs',
-        '**/__snapshots__/*',
-        '**/__tests__',
-        '**/*.test.js+(|x)',
-        '**/*.test.ts+(|x)',
-        '**/*.mdx',
-        '**/*.story.jsx',
-        '**/*.story.tsx',
-        '**/*.stories.ts+(|x)',
-      ],
-    }),
-    babel({
-      extensions: [...DEFAULT_EXTENSIONS, '.ts', 'tsx'],
-      babelHelpers: 'runtime',
-      exclude: /node_modules/,
-    }),
+import packageJson from './package.json' assert { type: 'json' };
 
-    url(),
-    svgr(),
-    resolve(),
-    commonjs(),
-    terser(),
-  ],
-  watch: {
-    clearScreen: false,
+export default [
+  {
+    input: 'src/index.ts',
+    output: [
+      {
+        file: packageJson.main,
+        format: 'cjs',
+        sourcemap: false,
+        name: 'react-ts-lib'
+      },
+      {
+        file: packageJson.module,
+        format: 'esm',
+        sourcemap: false,
+      }
+    ],
+    plugins: [
+      external(),
+      resolve(),
+      commonjs(),
+      typescript({
+        tsconfig: './tsconfig.json',
+        sourceMap: false,
+        exclude: [
+          'coverage',
+          '.storybook',
+          'storybook-static',
+          'config',
+          'dist',
+          'node_modules/**',
+          '*.cjs',
+          '*.mjs',
+          '**/__snapshots__/*',
+          '**/__tests__',
+          '**/*.test.js+(|x)',
+          '**/*.test.ts+(|x)',
+          '**/*.mdx',
+          '**/*.story.ts+(|x)',
+          '**/*.story.js+(|x)',
+          '**/*.stories.ts+(|x)',
+          '**/*.stories.js+(|x)',
+        ],
+      }),
+      url(),
+      svgr(),
+      postcss(),
+      terser()
+    ],
   },
-};
-
-export default config;
+  {
+    input: 'dist/esm/types/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: "esm" }],
+    external: [/\.(sc|sa|c)ss$/],
+    plugins: [dts()],
+  },
+]

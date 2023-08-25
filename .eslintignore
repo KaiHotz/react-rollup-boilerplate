@@ -6,3 +6,9 @@ dist
 node_modules
 coverage
 storybook-static
+.storybook
+
+**/__tests__
+*.test.jsx
+*.test.tsx
+
