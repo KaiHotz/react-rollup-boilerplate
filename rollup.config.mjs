@@ -8,31 +8,39 @@ import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 import { terser } from 'rollup-plugin-terser';
+import typescriptEngine from 'typescript';
 
 const packageJson = JSON.parse(readFileSync('./package.json'));
 
 export default [
   {
-    input: 'src/index.ts',
+    input: './src/index.ts',
     output: [
       {
         file: packageJson.main,
         format: 'cjs',
         sourcemap: false,
+        exports: 'named',
         name: packageJson.name,
       },
       {
         file: packageJson.module,
         format: 'esm',
+        exports: 'named',
         sourcemap: false,
       },
     ],
     plugins: [
-      external(),
+      postcss({
+        plugins: [],
+        minimize: true,
+      }),
+      external({ includeDependencies: true }),
       resolve(),
       commonjs(),
       typescript({
         tsconfig: './tsconfig.json',
+        typescript: typescriptEngine,
         sourceMap: false,
         exclude: [
           'coverage',
@@ -56,7 +64,6 @@ export default [
       }),
       url(),
       svgr(),
-      postcss(),
       terser(),
     ],
   },
