@@ -29,7 +29,6 @@
     "stylelint:fix": "stylelint \"**/*.{css,scss,sass}\" --fix",
     "check-types": "tsc --noEmit true",
     "ci": "yarn lint && yarn test --watch=false",
-    "audit:fix": "npx yarn-audit-fix",
     "test": "vitest --config ./vitest.config.ts",
     "prepare": "yarn build",
     "prerelease": "yarn lint:fix && yarn test:coverage",
@@ -39,9 +38,9 @@
     "storybook:deploy": "yarn storybook:build && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true"
   },
   "peerDependencies": {
+    "clsx": "2.x",
     "react": "18.x",
-    "react-dom": "18.x",
-    "clsx": "2.x"
+    "react-dom": "18.x"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.4",
@@ -67,7 +66,6 @@
     "clsx": "^2.0.0",
     "eslint": "latest",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^5.0.0",
@@ -97,8 +95,7 @@
     "tslib": "^2.6.2",
     "typescript": "5.1.6",
     "vite": "^4.4.9",
-    "vitest": "^0.34.3",
-    "yarn-audit-fix": "^10.0.1"
+    "vitest": "^0.34.3"
   },
   "packageManager": "yarn@3.6.3"
 }

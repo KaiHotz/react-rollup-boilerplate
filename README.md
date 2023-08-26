@@ -109,7 +109,6 @@ yarn deploy
 - `yarn check-types`: Runs typescript type checker.
 - `yarn ci`: Runs Linting, tests and type checker all together.
 - `yarn release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file).
-- `yarn audit:fix`: Is similar to npm audit --fix, it checks dependencies for reported vulnerabilities and tire to patch them.
 - `yarn storybook`: Same as yarn start, to serve storybook.
 - `yarn storybook:build`: Generates the build for storybook in `storybook-static` folder, that can be deployed wherever you need.
 - `yarn storybook:deploy`: Builds and deploys Storybook to GitHub Pages.
@@ -136,5 +135,6 @@ yarn deploy
 - [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app)
 - [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
 - [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
+
 ### Compiler
 - [Typescript](https://www.typescriptlang.org/)

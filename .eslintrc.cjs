@@ -1,6 +1,7 @@
 module.exports = {
   root: true,
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
@@ -9,7 +10,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended'
   ],
-  plugins: ['react', 'react-hooks', 'storybook', 'import', 'jsx-a11y', 'prettier'],
+  plugins: ['react', 'react-hooks', 'react-refresh', 'storybook', 'import', 'jsx-a11y', 'prettier'],
   env: {
     node: true,
     browser: true,
@@ -40,6 +41,7 @@ module.exports = {
     'src/graphql/generated/*',
   ],
   rules: {
+    "react-refresh/only-export-components": "warn",
     "import/namespace": "off",
     'newline-before-return': 'error',
     'react/jsx-uses-react': 'error',
