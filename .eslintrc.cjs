@@ -41,8 +41,8 @@ module.exports = {
     'src/graphql/generated/*',
   ],
   rules: {
-    "react-refresh/only-export-components": "warn",
-    "import/namespace": "off",
+    'react-refresh/only-export-components': 'warn',
+    'import/namespace': 0,
     'newline-before-return': 'error',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
@@ -98,7 +98,7 @@ module.exports = {
     ],
     'import/no-extraneous-dependencies': 0,
   },
-  ignorePatterns: [".eslintrc.cjs", "vitest.config.ts", "setupTests.ts"],
+  ignorePatterns: ['.eslintrc.cjs', 'vitest.config.ts', 'setupTests.ts'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
