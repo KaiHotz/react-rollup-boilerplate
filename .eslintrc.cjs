@@ -49,13 +49,7 @@ module.exports = {
     'no-debugger': 'warn',
     'no-warning-comments': 'warn',
     'object-shorthand': 'error',
-    'no-param-reassign': [
-      'error',
-      {
-        props: true,
-        ignorePropertyModificationsFor: ['acc', 'next'],
-      },
-    ],
+    'no-param-reassign': 'off',
     'react/prop-types': 'off',
     'react/self-closing-comp': [
       'error',
