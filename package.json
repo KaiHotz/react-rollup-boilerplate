@@ -16,8 +16,7 @@
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=18.17.1",
-    "yarn": "^3.x"
+    "node": ">=16"
   },
   "scripts": {
     "start": "NODE_ENV=development BABEL_ENV=development yarn storybook",
