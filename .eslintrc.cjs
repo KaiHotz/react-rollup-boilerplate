@@ -94,7 +94,7 @@ module.exports = {
         ],
       },
     ],
-    'import/no-extraneous-dependencies': 'error',
+    'import/no-extraneous-dependencies': 0,
   },
   ignorePatterns: [".eslintrc.cjs", "vitest.config.ts", "setupTests.ts"],
   overrides: [
