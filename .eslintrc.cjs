@@ -40,6 +40,7 @@ module.exports = {
     'src/graphql/generated/*',
   ],
   rules: {
+    "import/namespace": "off",
     'newline-before-return': 'error',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
