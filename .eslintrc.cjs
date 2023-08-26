@@ -43,6 +43,7 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     'import/namespace': 0,
+    'import/named': 0,
     'newline-before-return': 'error',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
