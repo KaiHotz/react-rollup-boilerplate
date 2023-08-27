@@ -34,13 +34,6 @@ Always provide an `YourComponent.story.tsx` file, so your component will show up
 
 You can refer to example `Button` component, but I think you'll get the idea.
 
-### Proposals (Babel)
-
-For smoother development some Babel plugin are included
-- [class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-class-properties)
-- [object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread)
-- [optional-chaining](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-optional-chaining)
-
 ## Styling your components
 
 `SCSS` and `CSS` are supported out of the box just import your styles into your component like you normally would do.
@@ -48,20 +41,15 @@ For the use of  `CSS Modules` refer to [rollup-plugin-postcss](https://github.co
 
 ## Testing
 
-Testing is done with [Jest](https://facebook.github.io/jest/) and [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
+Testing is done with [JeVitestst](https://vitest.dev/) and [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
 You can refer to `Button.test.js` as an example.
 ```
 yarn test
 ```
-or (for getting coverage)
-```
-yarn test:coverage
-```
 
+## Linting and Code formating
 
-## Linting
-
-Linting is set up through [ESLint](https://eslint.org/) and configured with  [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app) and
+Linting and code formating is done via [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) using [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) and
 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
 You can modify linting rules by overriding them in the `.eslintrc.cjs` file.
 
