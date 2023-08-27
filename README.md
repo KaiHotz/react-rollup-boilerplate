@@ -18,7 +18,6 @@ Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.
 yarn install
 ```
 
-
 ## Developing
 
 To start the developing run :
@@ -36,18 +35,14 @@ You can refer to example `Button` component, but I think you'll get the idea.
 
 ## Styling your components
 
-`SCSS` and `CSS` are supported out of the box just import your styles into your component like you normally would do.
+`SCSS` and `CSS` are supported out of the box, just import your styles into your component like you normally would do.
 For the use of  `CSS Modules` refer to [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss)
 
-## Testing
+## Linting and Code formating for Styles
+Linting `SCSS` and `CSS` is suported out of the box following BEM by using [stylelint](https://stylelint.io/)
 
-Testing is done with [Vitest](https://vitest.dev/) and [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
-You can refer to `Button.test.js` as an example.
-```
-yarn test
-```
 
-## Linting and Code formating
+## Linting and Code formating for Typescript
 
 Linting and code formating is done via [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) using [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) and
 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
@@ -59,6 +54,15 @@ yarn lint
 or (if automatic fixing is possible)
 ```
 yarn lint:fix
+```
+
+
+## Testing
+
+Testing is done with [Vitest](https://vitest.dev/) and [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
+You can refer to `Button.test.js` as an example.
+```
+yarn test
 ```
 
 ## Publishing your library to NPM
@@ -119,8 +123,8 @@ yarn deploy
 
 ### Linting
 - [ESLint](https://eslint.org/)
+- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-- [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app)
 - [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
 - [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
 
