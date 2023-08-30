@@ -6,7 +6,6 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
     'plugin:storybook/recommended',
-    'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended'
   ],
@@ -70,7 +69,6 @@ module.exports = {
         aspects: ['invalidHref'],
       },
     ],
-    'import/namespace': 'off',
     'import/order': [
       'error',
       {
@@ -90,7 +88,6 @@ module.exports = {
         ],
       },
     ],
-    'import/no-extraneous-dependencies': 0,
   },
   ignorePatterns: ['.eslintrc.cjs', 'vitest.config.ts', 'setupTests.ts'],
   overrides: [
@@ -98,7 +95,6 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript',
       ],
