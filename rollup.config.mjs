@@ -25,7 +25,7 @@ export default [
       },
       {
         file: packageJson.module,
-        format: 'esm',
+        format: 'es',
         exports: 'named',
         sourcemap: false,
       },
