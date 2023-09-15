@@ -1,3 +1,5 @@
+import { mergeConfig } from 'vite';
+import svgr from 'vite-plugin-svgr';
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
@@ -31,8 +33,18 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   core: {
+    builder: '@storybook/builder-vite',
     disableTelemetry: true,
-  }
+  },
+  async viteFinal(config) {
+    // Merge custom configuration into the default config
+    return mergeConfig(config, {
+      // Add dependencies to pre-optimization
+      plugins: [svgr()],
+
+    });
+  },
+
 };
 
 export default config;
