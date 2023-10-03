@@ -4,11 +4,11 @@ import cx from 'clsx';
 import { useTab } from './context';
 import './Tab.scss';
 
-export const Tab: FC<PropsWithChildren> = ({ children }) => {
+export const Tab: FC<PropsWithChildren<{ id?: string }>> = ({ children, id }) => {
   const tabAttributes = useTab();
 
   return (
-    <div {...tabAttributes} className={cx('tab', { 'tab--active': tabAttributes['aria-selected'] })}>
+    <div {...tabAttributes} id={id} className={cx('tab', { 'tab--active': tabAttributes['aria-selected'] })}>
       {children}
     </div>
   );

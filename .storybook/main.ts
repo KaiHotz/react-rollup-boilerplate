@@ -33,8 +33,7 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   core: {
-    builder: '@storybook/builder-vite',
-    disableTelemetry: true,
+    disableTelemetry: true
   },
   async viteFinal(config) {
     // Merge custom configuration into the default config
