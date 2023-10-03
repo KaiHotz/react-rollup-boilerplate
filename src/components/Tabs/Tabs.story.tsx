@@ -23,9 +23,7 @@ export const Default: Story = {
         <div style={{ padding: '20px 10px', marginTop: 30, border: '1px solid #000' }}>
           <Tabs {...args} selected={selected} setSelected={setSelected}>
             <TabsList>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} title="tooltip">
-                <Tab id="foo">First Tab</Tab>
-              </div>
+              <Tab>First Tab</Tab>
               <Tab>Second Tab</Tab>
               <Tab>Third Tab</Tab>
             </TabsList>
