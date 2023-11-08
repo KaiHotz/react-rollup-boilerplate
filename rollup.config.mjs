@@ -1,4 +1,5 @@
 import { readFileSync } from 'fs';
+import { defineConfig } from 'rollup';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
@@ -12,7 +13,7 @@ import typescriptEngine from 'typescript';
 
 const packageJson = JSON.parse(readFileSync('./package.json'));
 
-export default [
+export default defineConfig(
   {
     input: './src/index.ts',
     output: [
@@ -60,6 +61,8 @@ export default [
           '**/*.story.js+(|x)',
           '**/*.stories.ts+(|x)',
           '**/*.stories.js+(|x)',
+          'setupTests.ts',
+          'vitest.config.ts',
         ],
       }),
       url(),
@@ -73,4 +76,4 @@ export default [
     external: [/\.(sc|sa|c)ss$/],
     plugins: [dts()],
   },
-];
+);

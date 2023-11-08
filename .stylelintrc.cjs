@@ -12,7 +12,7 @@ module.exports = {
     'selector-max-universal': 0,
     'max-nesting-depth': 4,
 
-    'scss/at-import-no-partial-leading-underscore': true,
+    'scss/load-no-partial-leading-underscore': true,
 
     // Declaration block
     'declaration-block-no-duplicate-properties': true,
