@@ -1704,7 +1704,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.18.9, @babel/traverse@npm:^7.23.2":
+"@babel/traverse@npm:^7.18.9, @babel/traverse@npm:^7.22.11, @babel/traverse@npm:^7.22.8, @babel/traverse@npm:^7.23.2":
   version: 7.23.2
   resolution: "@babel/traverse@npm:7.23.2"
   dependencies:
@@ -1719,24 +1719,6 @@ __metadata:
     debug: "npm:^4.1.0"
     globals: "npm:^11.1.0"
   checksum: e4fcb8f8395804956df4ae1301230a14b6eb35b74a7058a0e0b40f6f4be7281e619e6dafe400e833d4512da5d61cf17ea177d04b00a8f7cf3d8d69aff83ca3d8
-  languageName: node
-  linkType: hard
-
-"@babel/traverse@npm:^7.22.11, @babel/traverse@npm:^7.22.8":
-  version: 7.22.11
-  resolution: "@babel/traverse@npm:7.22.11"
-  dependencies:
-    "@babel/code-frame": "npm:^7.22.10"
-    "@babel/generator": "npm:^7.22.10"
-    "@babel/helper-environment-visitor": "npm:^7.22.5"
-    "@babel/helper-function-name": "npm:^7.22.5"
-    "@babel/helper-hoist-variables": "npm:^7.22.5"
-    "@babel/helper-split-export-declaration": "npm:^7.22.6"
-    "@babel/parser": "npm:^7.22.11"
-    "@babel/types": "npm:^7.22.11"
-    debug: "npm:^4.1.0"
-    globals: "npm:^11.1.0"
-  checksum: d4ced0258e5eed00faeabf28a28985249ddc70bb6834e61e2c16f4704d25e2a9015966ea7fd0d0ed8a4e2241f08f0990694c8bc3e5935bae47faf4fd0dbf0f8e
   languageName: node
   linkType: hard
 
