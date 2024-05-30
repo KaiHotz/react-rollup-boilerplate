@@ -17,7 +17,7 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "scripts": {
     "start": "NODE_ENV=development BABEL_ENV=development yarn storybook",
