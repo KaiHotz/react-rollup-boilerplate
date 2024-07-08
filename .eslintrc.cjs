@@ -5,11 +5,18 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:storybook/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
-  plugins: ['react', 'react-hooks', 'react-refresh', 'storybook', 'import', 'jsx-a11y', 'prettier'],
+  plugins: [
+    'react',
+    'react-hooks',
+    'react-refresh',
+    'import',
+    'jsx-a11y',
+    'prettier'
+  ],
   env: {
     node: true,
     browser: true,
@@ -18,10 +25,6 @@ module.exports = {
     ecmaVersion: 'latest',
     react: {
       version: 'detect',
-    },
-    'import/resolver': {
-      node: true,
-      typescript: true,
     },
   },
   parserOptions: {
@@ -33,22 +36,52 @@ module.exports = {
   },
   ignorePatterns: [
     '!*.js',
-    '!.storybook',
     '.*.js',
     '*.json',
+    '!.storybook',
     'scripts',
     'src/graphql/generated/*',
+    'node_modules',
+    'dist',
+    '.eslintrc.cjs',
+    'vitest.config.ts',
+    'setupTests.ts'
   ],
   rules: {
-    'react-refresh/only-export-components': 'off',
-    'newline-before-return': 'error',
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
-    'no-console': 'warn',
+    'newline-before-return': 'warn',
+    'no-console': [
+      'warn',
+      {
+        allow: [
+          'info',
+          'warn',
+          'dir',
+          'timeLog',
+          'assert',
+          'clear',
+          'count',
+          'countReset',
+          'group',
+          'groupEnd',
+          'table',
+          'dirxml',
+          'error',
+          'groupCollapsed',
+          'Console',
+          'profile',
+          'profileEnd',
+          'timeStamp',
+          'context',
+        ],
+      },
+    ],
     'no-debugger': 'warn',
+    'no-unused-vars': 'warn',
     'no-warning-comments': 'warn',
     'object-shorthand': 'error',
     'no-param-reassign': 'off',
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react/display-name': 'off',
     'react/prop-types': 'off',
     'react/self-closing-comp': [
       'error',
@@ -57,18 +90,39 @@ module.exports = {
         html: true,
       },
     ],
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
     'react/jsx-props-no-spreading': 'off',
-    'react/jsx-curly-brace-presence': [
-      'error',
-      { props: 'never', children: 'never' },
-    ],
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-noninteractive-element-to-interactive-role': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
-        components: ['Link', 'NextLink', 'RouterLink'],
+        components: ['Link', 'RouterLink'],
         aspects: ['invalidHref'],
       },
     ],
+    'import/no-duplicates': 'error',
+    'import/no-self-import': 'error',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        peerDependencies: true,
+        devDependencies: [
+          '**/*.test.[jt]s',
+          '**/*.spec.[jt]s',
+          '**/*.test.[jt]sx',
+          '**/*.spec.[jt]sx',
+          '**/*.stories.@(js|jsx|mjs|ts|tsx)',
+          './src/setupTests.ts',
+          './src/main.tsx',
+          './vite.config.ts',
+          '@faker-js/faker',
+        ],
+      },
+    ],
+    'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
     'import/order': [
       'error',
       {
@@ -80,23 +134,23 @@ module.exports = {
           },
         ],
         pathGroupsExcludedImportTypes: ['builtin'],
-        groups: [
-          ['builtin', 'external'],
-          ['internal'],
-          ['parent', 'sibling', 'index'],
-          'unknown',
-        ],
+        groups: [['builtin', 'external'], ['internal'], ['parent', 'sibling', 'index'], 'unknown'],
+      },
+    ],
+    'import/no-cycle': [
+      'error',
+      {
+        maxDepth: '∞',
+        ignoreExternal: true,
       },
     ],
   },
-  ignorePatterns: ['.eslintrc.cjs', 'vitest.config.ts', 'setupTests.ts'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking'
       ],
       plugins: ['@typescript-eslint/eslint-plugin'],
       parser: '@typescript-eslint/parser',
@@ -105,27 +159,16 @@ module.exports = {
         tsconfigRootDir: __dirname,
       },
       rules: {
-        '@typescript-eslint/no-use-before-define': [
-          'error',
-          { functions: false },
-        ],
-        '@typescript-eslint/no-floating-promises': [
-          'error',
-          { ignoreVoid: true },
-        ],
-      },
-    },
-    {
-      files: [
-        '*story.*',
-        '*stories.*',
-        'src/pages/**/*.tsx',
-        'additional.d.ts',
-        '**/__mocks__/**',
-      ],
-      rules: {
-        'import/no-anonymous-default-export': 'off',
-        'import/no-default-export': 'off',
+        '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/no-misused-promises': 'off',
+        '@typescript-eslint/unbound-method': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
+        '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: true }],
       },
     },
   ],

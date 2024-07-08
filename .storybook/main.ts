@@ -6,7 +6,7 @@ const config: StorybookConfig = {
   stories: [
     '../src/**/*.mdx',
     '../src/**/*.stories.@(js|jsx|ts|tsx)',
-    '../src/components/**/*.stories.mdx',
+    '../src/components/**/*.mdx',
     '../src/components/**/*.story.mdx',
     '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
     '../src/components/**/*.story.@(js|jsx|ts|tsx)'
@@ -24,26 +24,16 @@ const config: StorybookConfig = {
         transcludeMarkdown: true
       }
     },
+    '@chromatic-com/storybook'
   ],
   framework: {
     name: '@storybook/react-vite',
     options: {},
   },
-  docs: {
-    autodocs: true,
-  },
+  docs: {},
   core: {
     disableTelemetry: true
   },
-  async viteFinal(config) {
-    // Merge custom configuration into the default config
-    return mergeConfig(config, {
-      // Add dependencies to pre-optimization
-      plugins: [svgr()],
-
-    });
-  },
-
 };
 
 export default config;

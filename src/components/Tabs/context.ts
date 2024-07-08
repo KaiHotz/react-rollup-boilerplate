@@ -1,4 +1,4 @@
-import { createContext, useContext, KeyboardEvent, MouseEvent } from 'react';
+import { createContext, KeyboardEvent, MouseEvent, useContext } from 'react';
 
 export interface ITabContextValues {
   key: string;

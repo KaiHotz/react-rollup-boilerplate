@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { readFileSync } from 'fs';
 import { defineConfig } from 'rollup';
 import resolve from '@rollup/plugin-node-resolve';
