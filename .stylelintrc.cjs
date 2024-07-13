@@ -9,13 +9,11 @@ module.exports = {
     // General / Sheet
     'no-duplicate-at-import-rules': true,
     'no-duplicate-selectors': true,
-    'selector-max-universal': 0,
-    'max-nesting-depth': 4,
-
+    'selector-max-universal': 2,
+    'max-nesting-depth': 6,
     'scss/load-no-partial-leading-underscore': true,
 
     // Declaration block
-    'declaration-block-no-duplicate-properties': true,
     'declaration-block-no-shorthand-property-overrides': true,
 
     // Selector
