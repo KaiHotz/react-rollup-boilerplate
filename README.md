@@ -46,7 +46,7 @@ Linting `SCSS` and `CSS` is suported out of the box following BEM by using [styl
 
 Linting and code formating is done via [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) using [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) and
 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
-You can modify linting rules by overriding them in the `.eslintrc.cjs` file.
+You can modify linting rules by overriding them in the `eslint.config.js` file.
 
 ```
 yarn lint

@@ -35,7 +35,7 @@
     "types": ["@testing-library/jest-dom"],
     "useDefineForClassFields": true,
   },
-  "include": ["src", "*.tsx", "*.ts"],
+  "include": ["src", "*.tsx", "*.ts", "eslint.config.js"],
   "exclude": [
     "coverage",
     "config",
