@@ -8,7 +8,7 @@ import eslintPluginPrettier from 'eslint-plugin-prettier';
 import pluginReact from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
 import tsPareser from '@typescript-eslint/parser';
-
+import pluginImport from 'eslint-plugin-import';
 export default tseslint.config(
   {
     ignores: ['dist', '.git', '.npmrc', '.yarnrc', 'coverage', 'storybook-static', '.storybook', '.yarn'],
@@ -28,6 +28,7 @@ export default tseslint.config(
       'react': pluginReact,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      'import': pluginImport,
       'jsx-a11y': jsxA11y,
       'prettier': eslintPluginPrettier,
     },
@@ -87,6 +88,29 @@ export default tseslint.config(
         {
           components: ['Link', 'RouterLink'],
           aspects: ['invalidHref'],
+        },
+      ],
+      'import/no-duplicates': 'error',
+      'import/no-self-import': 'error',
+      'import/order': [
+        'error',
+        {
+          'newlines-between': 'always',
+          pathGroups: [
+            {
+              pattern: '$/**',
+              group: 'internal',
+            },
+          ],
+          pathGroupsExcludedImportTypes: ['builtin'],
+          groups: [['builtin', 'external'], ['internal'], ['parent', 'sibling', 'index'], 'unknown'],
+        },
+      ],
+      'import/no-cycle': [
+        'error',
+        {
+          maxDepth: '∞',
+          ignoreExternal: true,
         },
       ],
       '@typescript-eslint/no-unused-vars': 'warn',
