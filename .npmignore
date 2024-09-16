@@ -12,6 +12,7 @@
 .travis.yml
 .editorconfig
 .eslint*
+eslint.config.js
 .yarnrc
 .babel*
 .stylelint*
