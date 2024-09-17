@@ -7,7 +7,6 @@ import configPrettier from 'eslint-config-prettier';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import pluginReact from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
-import tsPareser from '@typescript-eslint/parser';
 import pluginImport from 'eslint-plugin-import';
 export default tseslint.config(
   {
@@ -19,7 +18,7 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
-      parser: tsPareser,
+      parser: tseslint.parser,
       parserOptions: {
         project: ['./tsconfig.json'],
       },
