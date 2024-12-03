@@ -89,6 +89,7 @@ export default tseslint.config(
           aspects: ['invalidHref'],
         },
       ],
+      'sort-imports': ['error', { 'ignoreCase': true, 'ignoreDeclarationSort': true }],
       'import/no-duplicates': 'error',
       'import/no-self-import': 'error',
       'import/order': [
