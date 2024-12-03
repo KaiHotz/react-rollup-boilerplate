@@ -7,10 +7,10 @@
       ]
     },
     "allowJs": true,
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ES2023",
+    "module": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["@testing-library/jest-dom"],
     "skipLibCheck": true,
     "sourceMap": true,
