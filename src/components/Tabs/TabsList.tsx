@@ -1,4 +1,4 @@
-import React, { createRef, FC, PropsWithChildren, useCallback } from 'react';
+import { createRef, Children, FC, PropsWithChildren, useCallback } from 'react';
 
 import { TabContext, useTabList } from './context';
 import './TabsList.scss';
@@ -32,7 +32,7 @@ export const TabsList: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div role="tablist" ref={ref} className="tab-list">
-      {React.Children.map(children, (child, index) => {
+      {Children.map(children, (child, index) => {
         const isSelected = index === selected;
 
         return (

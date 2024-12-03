@@ -1,38 +1,42 @@
 {
   "compilerOptions": {
-    "target": "es2023",
-    "module": "esnext",
-    "jsx": "react",
-    "sourceMap": true,
-    "outDir": "dist",
-    "strict": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-
-    "noEmit": false,
     "baseUrl": "./src",
-    "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
       "*": [
         "*",
       ]
     },
     "allowJs": true,
-    "isolatedModules": true,
-    "noImplicitAny": true,
+    "target": "esnext",
+    "module": "esnext",
+    "useDefineForClassFields": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "types": ["@testing-library/jest-dom"],
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+    "downlevelIteration": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleDetection": "force",
+    "noEmit": false,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
     "strictNullChecks": true,
+    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "downlevelIteration": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "types": ["@testing-library/jest-dom"],
-    "useDefineForClassFields": true,
   },
   "include": ["src", "*.tsx", "*.ts", "eslint.config.js"],
   "exclude": [
