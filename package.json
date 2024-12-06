@@ -37,8 +37,8 @@
   },
   "peerDependencies": {
     "clsx": "2.x",
-    "react": "18.x",
-    "react-dom": "18.x"
+    "react": "19.x",
+    "react-dom": "19.x"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
@@ -63,8 +63,8 @@
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
     "@vitejs/plugin-react": "^4.3.4",
     "clsx": "^2.1.1",
     "eslint": "^9.16.0",
@@ -81,8 +81,8 @@
     "postcss": "^8.4.49",
     "postcss-scss": "^4.0.9",
     "prettier": "3.4.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "regenerator-runtime": "^0.14.1",
     "rimraf": "^6.0.1",
     "rollup": "^4.28.1",
