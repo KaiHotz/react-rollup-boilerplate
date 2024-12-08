@@ -27,8 +27,8 @@ export const Tabs: FC<ITabsProps> = ({ id = 'tabs', children, testId, selected, 
 
   return (
     <div id={id} data-testId={testId}>
-      <TabListContext.Provider value={{ selected, onTabChange, tabsId: id }}>{tabList}</TabListContext.Provider>
-      <TabPanelContext.Provider
+      <TabListContext value={{ selected, onTabChange, tabsId: id }}>{tabList}</TabListContext>
+      <TabPanelContext
         value={{
           role: 'tabpanel',
           id: `${id}-${selected}-tab`,
@@ -36,7 +36,7 @@ export const Tabs: FC<ITabsProps> = ({ id = 'tabs', children, testId, selected, 
         }}
       >
         {tabPanels[selected]}
-      </TabPanelContext.Provider>
+      </TabPanelContext>
     </div>
   );
 };
