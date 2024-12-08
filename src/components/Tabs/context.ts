@@ -1,4 +1,4 @@
-import { createContext, KeyboardEvent, MouseEvent, useContext } from 'react';
+import { createContext, KeyboardEvent, MouseEvent, use } from 'react';
 
 export interface ITabContextValues {
   key: string;
@@ -29,7 +29,7 @@ export const TabPanelContext = createContext<ITabPanelContextValues | null>(null
 export const TabListContext = createContext<TabListContextValues | null>(null);
 
 export const useTab = () => {
-  const tabData = useContext(TabContext);
+  const tabData = use(TabContext);
   if (tabData == null) {
     throw Error('A Tab must have a TabList parent');
   }
@@ -38,7 +38,7 @@ export const useTab = () => {
 };
 
 export const useTabPanel = () => {
-  const tabPanelData = useContext(TabPanelContext);
+  const tabPanelData = use(TabPanelContext);
   if (tabPanelData == null) {
     throw Error('A TabPanel must have a Tabs parent');
   }
@@ -47,7 +47,7 @@ export const useTabPanel = () => {
 };
 
 export const useTabList = () => {
-  const tabListData = useContext(TabListContext);
+  const tabListData = use(TabListContext);
   if (tabListData == null) {
     throw Error('A TabList must have a Tabs parent');
   }

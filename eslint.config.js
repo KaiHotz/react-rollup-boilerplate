@@ -113,6 +113,7 @@ export default tseslint.config(
           ignoreExternal: true,
         },
       ],
+      '@typescript-eslint/no-deprecated': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-misused-promises': 'off',
       '@typescript-eslint/unbound-method': 'off',
