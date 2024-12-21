@@ -41,7 +41,7 @@
     "react-dom": "19.x"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.2",
+    "@chromatic-com/storybook": "^3.2.3",
     "@eslint/js": "^9.17.0",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
@@ -85,7 +85,7 @@
     "react-dom": "^19.0.0",
     "regenerator-runtime": "^0.14.1",
     "rimraf": "^6.0.1",
-    "rollup": "^4.28.1",
+    "rollup": "^4.29.1",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
@@ -97,7 +97,7 @@
     "tslib": "^2.8.1",
     "typescript": "5.7.2",
     "typescript-eslint": "^8.18.1",
-    "vite": "^6.0.3",
+    "vite": "^6.0.5",
     "vite-plugin-svgr": "^4.3.0",
     "vitest": "^2.1.8"
   },
