@@ -26,14 +26,14 @@ export default defineConfig(
     ],
     plugins: [
       external({ includeDependencies: true }),
-      resolve(),
+      resolve({
+        ignoreGlobal: false,
+        include: ['node_modules/**'],
+        skip: ['react', 'react-dom'],
+      }),
       commonjs(),
       svgr(),
       url(),
-      postcss({
-        plugins: [],
-        minimize: true,
-      }),
       typescript({
         tsconfig: './tsconfig.json',
         typescript: typescriptEngine,
@@ -62,13 +62,17 @@ export default defineConfig(
           'vitest.config.ts',
         ],
       }),
+      postcss({
+        plugins: [],
+        minimize: true,
+      }),
       terser(),
     ],
   },
   {
     input: 'dist/src/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    external: [/\.(sc|sa|c)ss$/],
     plugins: [dts()],
+    external: [/\.(sc|sa|c)ss$/],
   },
 );
