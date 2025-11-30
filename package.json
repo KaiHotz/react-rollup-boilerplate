@@ -18,11 +18,10 @@
   "types": "dist/src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    },
-    "./styles.css": "./dist/kai-ui.css"
+      "require": "./dist/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
   },
   "files": [
     "dist"
