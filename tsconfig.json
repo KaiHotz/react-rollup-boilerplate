@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "rootDir": ".",
     "paths": {
       "*": [
-        "*",
+        "./*",
       ]
     },
     "allowJs": true,
@@ -11,7 +11,7 @@
     "module": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["@testing-library/jest-dom"],
+    "types": ["node", "@testing-library/jest-dom"],
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "dist",
@@ -43,6 +43,6 @@
     "coverage",
     "config",
     "dist",
-    "node_modules/**"
+    "node_modules"
   ]
 }
