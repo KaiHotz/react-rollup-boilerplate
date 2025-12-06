@@ -1,4 +1,4 @@
-import { Children, FC, ReactNode, useCallback, useMemo } from 'react';
+import { Children, type FC, type ReactNode, useCallback, useMemo } from 'react';
 
 import { TabListContext, TabPanelContext } from './context';
 

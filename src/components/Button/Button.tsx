@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import cx from 'clsx';
 
 import './Button.scss';

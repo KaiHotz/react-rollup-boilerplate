@@ -1,4 +1,4 @@
-import { Children, createRef, FC, PropsWithChildren, useCallback } from 'react';
+import { Children, createRef, type FC, type PropsWithChildren, useCallback } from 'react';
 
 import { TabContext, useTabList } from './context';
 import './TabsList.scss';

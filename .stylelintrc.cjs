@@ -11,7 +11,7 @@ module.exports = {
     'no-duplicate-selectors': true,
     'selector-max-universal': 2,
     'max-nesting-depth': 6,
-    'scss/load-no-partial-leading-underscore': true,
+    'scss/at-import-no-partial-leading-underscore': true,
 
     // Declaration block
     'declaration-block-no-shorthand-property-overrides': true,

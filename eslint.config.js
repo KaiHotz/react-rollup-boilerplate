@@ -14,7 +14,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 export default defineConfig(
   globalIgnores(['dist', '.git', '.yarn', '.npmrc', '.yarnrc', 'coverage', 'storybook-static', '.storybook']),
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended, eslintConfigPrettier],
+    extends: [js.configs.recommended, tseslint.configs.recommended, reactRefresh.configs.vite, eslintConfigPrettier],
     files: ['**/*.{ts,tsx}', '**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
@@ -27,29 +27,27 @@ export default defineConfig(
     plugins: {
       react: pluginReact,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
       import: pluginImport,
       'jsx-a11y': jsxA11y,
       prettier: eslintPluginPrettier,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'prettier/prettier': 'error',
       'newline-before-return': 'warn',
       'no-restricted-syntax': [
         'error',
         {
-          'selector': 'MemberExpression[object.name="React"][property.name!=/^[a-z]/]',
-          'message': "Do not use 'React.' notation for components or hooks. Destructure them from the 'react' import instead.",
+          selector: 'MemberExpression[object.name="React"][property.name!=/^[a-z]/]',
+          message: "Do not use 'React.' notation for components or hooks. Destructure them from the 'react' import instead.",
         },
         {
-          'selector': "TSQualifiedName[left.name='React']",
-          'message':
+          selector: "TSQualifiedName[left.name='React']",
+          message:
             "Don't use React.* namespace syntax in types. Import the specific type directly from 'react' instead (e.g., import { RefObject } from 'react').",
         },
       ],
-      'curly': ['error', 'all'],
+      curly: ['error', 'all'],
       'no-console': [
         'warn',
         {

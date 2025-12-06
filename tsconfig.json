@@ -2,9 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "*": [
-        "./*",
-      ]
+      "*": ["./*"]
     },
     "allowJs": true,
     "target": "ES2023",
@@ -20,6 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "downlevelIteration": true,
+    "verbatimModuleSyntax": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -36,13 +35,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": true
   },
   "include": ["src", "*.tsx", "*.ts", "eslint.config.js"],
-  "exclude": [
-    "coverage",
-    "config",
-    "dist",
-    "node_modules"
-  ]
+  "exclude": ["coverage", "config", "dist", "node_modules"]
 }
