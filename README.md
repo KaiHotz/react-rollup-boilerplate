@@ -1,132 +1,278 @@
-# Getting started
+# React Rollup Boilerplate
 
-There are two methods for getting started with this repo.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![Rollup](https://img.shields.io/badge/Rollup-4.x-EC4A3F?logo=rollup.js)](https://rollupjs.org/)
+[![Storybook](https://img.shields.io/badge/Storybook-10.x-FF4785?logo=storybook)](https://storybook.js.org/)
 
-#### Familiar with Git?
+A modern, production-ready boilerplate for building React component libraries. This project provides a complete development environment with Rollup bundling, TypeScript support, Storybook for component documentation, and comprehensive testing setup.
+
+## ✨ Features
+
+- **⚛️ React 19.2** - Built with the latest React version
+- **📦 Rollup Bundler** - Optimized ES modules output for tree-shaking
+- **🔷 TypeScript** - Full TypeScript support with type declarations
+- **📚 Storybook 10** - Interactive component documentation and development
+- **🧪 Vitest** - Fast unit testing with React Testing Library
+- **🎨 SCSS Support** - Styling with SCSS and CSS modules
+- **✅ ESLint & Prettier** - Code linting and formatting
+- **🎯 Stylelint** - CSS/SCSS linting with BEM methodology
+- **📱 Accessibility** - JSX a11y plugin for accessibility best practices
+
+## 📁 Project Structure
 
 ```
+react-rollup-boilerplate/
+├── src/
+│   ├── components/          # React components
+│   │   ├── Button/          # Example Button component
+│   │   │   ├── Button.tsx
+│   │   │   ├── Button.scss
+│   │   │   ├── Button.test.tsx
+│   │   │   ├── Button.stories.tsx
+│   │   │   └── index.ts
+│   │   ├── Tabs/            # Example Tabs component
+│   │   │   ├── Tabs.tsx
+│   │   │   ├── Tab.tsx
+│   │   │   ├── TabPanel.tsx
+│   │   │   ├── TabsList.tsx
+│   │   │   ├── context.ts
+│   │   │   ├── *.scss
+│   │   │   ├── Tabs.stories.tsx
+│   │   │   └── index.ts
+│   │   └── index.ts         # Component exports
+│   └── index.ts             # Main library entry point
+├── dist/                    # Built library output
+├── storybook-static/        # Built Storybook for deployment
+├── rollup.config.mjs        # Rollup bundler configuration
+├── tsconfig.json            # TypeScript configuration
+├── vitest.config.ts         # Vitest test configuration
+├── eslint.config.js         # ESLint configuration
+└── .stylelintrc.cjs         # Stylelint configuration
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- Yarn package manager
+
+### Installation
+
+#### Clone the repository
+
+```bash
 git clone git@github.com:KaiHotz/react-rollup-boilerplate.git
 cd react-rollup-boilerplate
 yarn install
 ```
 
-#### Not Familiar with Git?
+#### Or download directly
 
-Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.zip) to download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Download the [.zip file](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.zip), extract it, then:
 
-```
+```bash
+cd react-rollup-boilerplate
 yarn install
 ```
 
-## Developing
+## 💻 Development
 
-To start the developing run :
+Start the development environment with Storybook:
 
-```
+```bash
 yarn start
 ```
 
-This will build a version of your library, run the watcher and also run Storybook.
-To open Storybook manually open your Browser and navigate to [http://localhost:6060](http://localhost:6060).
-Start developing your components in `src/components` folder and update the `src/index.js` file accordingly.
-Always provide an `YourComponent.story.tsx` file, so your component will show up in Storybook.
+This launches Storybook at [http://localhost:6006](http://localhost:6006), where you can:
 
-You can refer to example `Button` component, but I think you'll get the idea.
+- View and interact with your components
+- Test different props and states
+- Document component usage
 
-## Styling your components
+### Creating Components
 
-`SCSS` and `CSS` are supported out of the box, just import your styles into your component like you normally would do.
-For the use of  `CSS Modules` refer to [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss)
+1. Create a new folder in `src/components/` with your component name
+2. Add your component files:
+   - `YourComponent.tsx` - Component implementation
+   - `YourComponent.scss` - Component styles
+   - `YourComponent.test.tsx` - Unit tests
+   - `YourComponent.stories.tsx` - Storybook stories
+   - `index.ts` - Component export
+3. Export your component from `src/components/index.ts`
 
-## Linting and Code formating for Styles
-Linting `SCSS` and `CSS` is suported out of the box following BEM by using [stylelint](https://stylelint.io/)
+Refer to the `Button` and `Tabs` components as examples.
 
+## 🎨 Styling
 
-## Linting and Code formating for Typescript
+### SCSS & CSS Support
 
-Linting and code formating is done via [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) using [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) and
-[eslint-config-prettier](https://github.com/prettier/eslint-config-prettier).
-You can modify linting rules by overriding them in the `eslint.config.js` file.
+Import styles directly into your components:
 
-```
-yarn lint
-```
-or (if automatic fixing is possible)
-```
-yarn lint:fix
-```
-
-
-## Testing
-
-Testing is done with [Vitest](https://vitest.dev/) and [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
-You can refer to `Button.test.js` as an example.
-```
-yarn test
+```tsx
+import './YourComponent.scss';
 ```
 
-## Publishing your library to NPM
+### CSS Modules
 
-To release your library to NPM or your private Registry, make sure you have an active account at [NPM](https://www.npmjs.com/), your `.npmrc` file is correctly setup and the registry url at publishConfig in `package.json` file is set to your repository url, then:
+For CSS Modules support, refer to [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss).
 
+### Style Linting
+
+SCSS and CSS are linted using [Stylelint](https://stylelint.io/) with BEM methodology:
+
+```bash
+yarn stylelint        # Check styles
+yarn stylelint:fix    # Auto-fix style issues
 ```
+
+## 🔍 Linting & Formatting
+
+### TypeScript/JavaScript
+
+Code quality is enforced via [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/):
+
+```bash
+yarn lint         # Run all linters (ESLint, Stylelint, TypeScript)
+yarn lint:fix     # Auto-fix all linting issues
+yarn eslint       # Run ESLint only
+yarn eslint:fix   # Auto-fix ESLint issues
+yarn check-types  # Run TypeScript type checker
+```
+
+Customize rules in `eslint.config.js`.
+
+## 🧪 Testing
+
+Testing is powered by [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/):
+
+```bash
+yarn test              # Run tests in watch mode
+yarn test:coverage     # Run tests with coverage report
+```
+
+See `Button.test.tsx` for example test patterns.
+
+## 📦 Building
+
+Build your library for production:
+
+```bash
+yarn build
+```
+
+Output is generated in the `dist/` folder with:
+
+- ES modules for modern bundlers
+- TypeScript type declarations
+
+## 🚢 Publishing
+
+### To NPM or Private Registry
+
+1. Ensure you have an active [NPM](https://www.npmjs.com/) account
+2. Configure your `.npmrc` file
+3. Update `publishConfig.registry` in `package.json`
+4. Run:
+
+```bash
 yarn release
 ```
 
-## Storybook
+This runs linting, tests, builds, and publishes your library.
 
-For custom layouts, styling and more information about Storybook, please refer to [Storybook](https://storybook.js.org/basics/writing-stories/) documentation.
+## 📚 Storybook
 
-#### Deploy Storybook to GitHub Pages
+### Development
 
-Make sure the homepage url in `package.json` file is set to your githup pages url, then:
-
-```
-yarn deploy
+```bash
+yarn storybook
 ```
 
-## Scripts
+### Build Static Storybook
 
-- `yarn start` : Only serves Storybook.
-- `yarn build` : Builds your library (build can be found in `dist` folder).
-- `yarn storybook:build` : Builds the static Storybook in case you want to deploy it.
-- `yarn test` : Runs the tests.
-- `yarn test:coverage`: Runs the test and shows the coverage.
-- `yarn lint` : Runs the linter, Typescript typecheck and stylelint.
-- `yarn lint:fix` : Runs the linter, Typescript typecheck and stylelint and fixes automatic fixable issues.
-- `yarn eslint`: Runs only the JavaScript linter.
-- `yarn eslint:fix`: Runs only the JavaScript linter and fixes automatic fixable issues.
-- `yarn stylelint`: Runs only the style linter.
-- `yarn stylelint:fix`: Runs only the style linter and fixes automatic fixable issues.
-- `yarn check-types`: Runs typescript type checker.
-- `yarn ci`: Runs Linting, tests and type checker all together.
-- `yarn release` : Publishes your Library on NPM or your private Registry (depending on your config in your `.npmrc` file).
-- `yarn storybook`: Same as yarn start, to serve storybook.
-- `yarn storybook:build`: Generates the build for storybook in `storybook-static` folder, that can be deployed wherever you need.
-- `yarn storybook:deploy`: Builds and deploys Storybook to GitHub Pages.
+```bash
+yarn storybook:build
+```
 
-## Resources
+Output is generated in `storybook-static/`.
 
-### Bundler
-- [Rollup.js](https://rollupjs.org/guide/en)
+### Deploy to GitHub Pages
 
-### Code Formatter
-- [Prettier](https://prettier.io/)
+Update the `homepage` URL in `package.json`, then:
 
-### Storybook
-- [Storybook](https://storybook.js.org/)
+```bash
+yarn storybook:deploy
+```
+
+For more information, see the [Storybook documentation](https://storybook.js.org/docs).
+
+## 📜 Available Scripts
+
+| Script                  | Description                                     |
+| ----------------------- | ----------------------------------------------- |
+| `yarn start`            | Start Storybook development server              |
+| `yarn build`            | Build library to `dist/` folder                 |
+| `yarn test`             | Run tests in watch mode                         |
+| `yarn test:coverage`    | Run tests with coverage report                  |
+| `yarn lint`             | Run all linters (ESLint, Stylelint, TypeScript) |
+| `yarn lint:fix`         | Auto-fix all linting issues                     |
+| `yarn eslint`           | Run ESLint only                                 |
+| `yarn eslint:fix`       | Auto-fix ESLint issues                          |
+| `yarn stylelint`        | Run Stylelint only                              |
+| `yarn stylelint:fix`    | Auto-fix Stylelint issues                       |
+| `yarn check-types`      | Run TypeScript type checker                     |
+| `yarn ci`               | Run linting and tests (for CI/CD)               |
+| `yarn release`          | Lint, test, build, and publish to NPM           |
+| `yarn storybook`        | Start Storybook                                 |
+| `yarn storybook:build`  | Build static Storybook                          |
+| `yarn storybook:deploy` | Deploy Storybook to GitHub Pages                |
+
+## 🛠️ Tech Stack
+
+### Core
+
+- [React 19](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+
+### Bundling
+
+- [Rollup.js](https://rollupjs.org/) - Module bundler
+- [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss) - CSS/SCSS processing
+
+### Development
+
+- [Storybook 10](https://storybook.js.org/) - Component development environment
+- [Vite](https://vitejs.dev/) - Development server for Storybook
 
 ### Testing
-- [Vitest](https://vitest.dev/)
-- [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/)
-- [@testing-library/jest-dom](https://github.com/testing-library/jest-dom)
 
-### Linting
-- [ESLint](https://eslint.org/)
-- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
-- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-- [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
-- [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
+- [Vitest](https://vitest.dev/) - Unit test framework
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - React component testing
+- [jest-dom](https://github.com/testing-library/jest-dom) - Custom DOM matchers
+- [Playwright](https://playwright.dev/) - Browser testing
 
-### Compiler
-- [Typescript](https://www.typescriptlang.org/)
+### Code Quality
+
+- [ESLint](https://eslint.org/) - JavaScript/TypeScript linting
+- [Prettier](https://prettier.io/) - Code formatting
+- [Stylelint](https://stylelint.io/) - CSS/SCSS linting
+- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) - React-specific linting
+- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) - Accessibility linting
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**Kai Hotz**
+
+- GitHub: [@KaiHotz](https://github.com/KaiHotz)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/KaiHotz/react-rollup-boilerplate/issues).
